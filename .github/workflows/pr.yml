@@ -8,21 +8,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
         with:
-          version: 9
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --strict-peer-dependencies]
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build
         id: build
         run: |
-          pnpm run build
+          npm run build
           echo "::notice title=🛠️ Build::Complete"
 
       - name: Lint
         id: lint
         run: |
-          pnpm run lint
+          npm run lint
           echo "::notice title=🧼️ Lint::Complete"
