@@ -5,7 +5,7 @@ export const hoverCard = {
   components: {
     HoverCardDemo: (
       <HoverCard>
-        <HoverCardTrigger asChild>
+        <HoverCardTrigger className="flex! mx-auto justify-center items-center" asChild>
           <span className="underline cursor-pointer">Hover over me</span>
         </HoverCardTrigger>
         <HoverCardContent>

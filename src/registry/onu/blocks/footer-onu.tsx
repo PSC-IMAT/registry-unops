@@ -151,8 +151,7 @@ export const footerOnuExamples = [
   {
     partners: [
       { name: 'UNOPS', logo: '/logos/unops.svg', url: 'https://unops.org' },
-      { name: 'UNDP', logo: '/logos/undp.svg', url: 'https://undp.org' },
-      { name: 'WHO', logo: '/logos/who.svg' },
+
     ],
     contacts: [
       { label: 'Email', value: 'info@unops.org', type: 'email' as const },

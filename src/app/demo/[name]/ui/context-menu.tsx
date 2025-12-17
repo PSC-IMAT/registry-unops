@@ -4,8 +4,8 @@ export const contextMenu = {
   name: "context-menu",
   components: {
     ContextMenuDemo: (
-      <ContextMenu>
-        <ContextMenuTrigger className="flex h-32 w-32 items-center justify-center rounded-md border border-dashed">
+      <ContextMenu >
+        <ContextMenuTrigger className=" h-14 flex items-center justify-center rounded-md border border-dashed">
           Right click here
         </ContextMenuTrigger>
         <ContextMenuContent>

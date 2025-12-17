@@ -45,6 +45,7 @@ export default async function RegistryItemPage({
       <ComponentCard
         component={component}
         baseUrl={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ""}
+        token={process.env.REGISTRY_AUTH_TOKEN ?? ""}
       />
     </div>
   );

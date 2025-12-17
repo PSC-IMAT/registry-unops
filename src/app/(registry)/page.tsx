@@ -67,7 +67,7 @@ export default function Home() {
           <CardHeader className="space-y-1">
             <div className="flex items-center justify-between">
               <CardTitle>UI Primitives</CardTitle>
-              <div className="rounded-md bg-foreground p-1">
+              <div className="rounded-md bg-primary p-1">
                 <ToyBrick className="size-5 text-primary-foreground" />
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function Home() {
           <CardHeader className="space-y-1">
             <div className="flex items-center justify-between">
               <CardTitle>Components</CardTitle>
-              <div className="rounded-md bg-foreground p-1">
+              <div className="rounded-md bg-primary p-1">
                 <Component className="size-5 text-primary-foreground" />
               </div>
             </div>

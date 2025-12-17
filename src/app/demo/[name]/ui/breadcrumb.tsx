@@ -4,7 +4,7 @@ export const breadcrumb = {
   name: "breadcrumb",
   components: {
     BreadcrumbDemo: (
-      <Breadcrumb>
+      <Breadcrumb className="flex items-center justify-center">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink href="/">Home</BreadcrumbLink>

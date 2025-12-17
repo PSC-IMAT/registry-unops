@@ -1,28 +1,16 @@
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/registry/onu/ui/pagination";
+import {
+  PaginationBasic,
+  PaginationDense,
+  PaginationFirstPageDisabled,
+  PaginationWithEllipsis,
+} from "@/app/demo/[name]/ui/pagination-client";
 
 export const pagination = {
   name: "pagination",
   components: {
-    PaginationDemo: (
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="#" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">1</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">2</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">3</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
-    ),
+    Basic: <PaginationBasic />,
+    Ellipsis: <PaginationWithEllipsis />,
+    FirstPageDisabled: <PaginationFirstPageDisabled />,
+    Dense: <PaginationDense />,
   },
 };

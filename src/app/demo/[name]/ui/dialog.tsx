@@ -6,7 +6,7 @@ export const dialog = {
   components: {
     DialogDemo: (
       <Dialog>
-        <DialogTrigger asChild>
+        <DialogTrigger asChild className="flex! mx-auto justify-center items-center">
           <Button>Open dialog</Button>
         </DialogTrigger>
         <DialogContent>

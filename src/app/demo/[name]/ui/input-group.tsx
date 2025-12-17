@@ -1,15 +1,24 @@
-import { InputGroup, InputGroupText } from "@/registry/onu/ui/input-group";
-import { Input } from "@/registry/onu/ui/input";
-import { Button } from "@/registry/onu/ui/button";
+import {
+  InputGroupDefault,
+  InputGroupHelperBelow,
+  InputGroupLabelAbove,
+  InputGroupPrefixText,
+  InputGroupSuffixText,
+  InputGroupTextareaExample,
+  InputGroupWithButton,
+  InputGroupWithIcon,
+} from "@/app/demo/[name]/ui/input-group-client";
 
 export const inputGroup = {
   name: "input-group",
   components: {
-    InputGroupDemo: (
-      <InputGroup>
-        <Input placeholder="0.00" />
-        <InputGroupText>$</InputGroupText>
-      </InputGroup>
-    ),
+    Default: <InputGroupDefault />,
+    PrefixText: <InputGroupPrefixText />,
+    SuffixText: <InputGroupSuffixText />,
+    WithIcon: <InputGroupWithIcon />,
+    WithButtons: <InputGroupWithButton />,
+    LabelAbove: <InputGroupLabelAbove />,
+    HelperBelow: <InputGroupHelperBelow />,
+    Textarea: <InputGroupTextareaExample />,
   },
 };

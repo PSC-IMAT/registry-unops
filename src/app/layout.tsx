@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/ui/sonner";
 
 import "@/styles/globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({
       />
       <body className="flex grow">
         {children}
+        <Toaster />
         <Analytics />
         <SpeedInsights />
       </body>

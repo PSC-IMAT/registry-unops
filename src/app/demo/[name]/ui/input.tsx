@@ -1,13 +1,24 @@
-import { Input } from "@/registry/onu/ui/input";
+import {
+  InputControlled,
+  InputDefault,
+  InputDisabled,
+  InputEmail,
+  InputFile,
+  InputInvalid,
+  InputLarge,
+  InputPassword,
+} from "@/app/demo/[name]/ui/input-client";
 
 export const input = {
   name: "input",
   components: {
-    InputDemo: (
-      <div className="flex flex-col gap-3 w-full max-w-sm">
-        <Input placeholder="Your name" />
-        <Input placeholder="Disabled" disabled />
-      </div>
-    ),
+    Default: <InputDefault />,
+    Disabled: <InputDisabled />,
+    Invalid: <InputInvalid />,
+    Email: <InputEmail />,
+    Password: <InputPassword />,
+    File: <InputFile />,
+    Controlled: <InputControlled />,
+    Large: <InputLarge />,
   },
 };

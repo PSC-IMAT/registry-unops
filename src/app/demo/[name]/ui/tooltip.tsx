@@ -1,18 +1,20 @@
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/registry/onu/ui/tooltip";
-import { Button } from "@/registry/onu/ui/button";
+import {
+  TooltipBasic,
+  TooltipControlled,
+  TooltipRichContent,
+  TooltipSides,
+  TooltipWithDelay,
+  TooltipWithIcon,
+} from "@/app/demo/[name]/ui/tooltip-client";
 
 export const tooltip = {
   name: "tooltip",
   components: {
-    TooltipDemo: (
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button variant="outline">Hover me</Button>
-          </TooltipTrigger>
-          <TooltipContent>Tooltip content</TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    ),
+    Basic: <TooltipBasic />,
+    Sides: <TooltipSides />,
+    WithIcon: <TooltipWithIcon />,
+    WithDelay: <TooltipWithDelay />,
+    RichContent: <TooltipRichContent />,
+    Controlled: <TooltipControlled />,
   },
 };

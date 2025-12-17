@@ -1,18 +1,18 @@
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/registry/onu/ui/collapsible";
-import { Button } from "@/registry/onu/ui/button";
+import {
+  CollapsibleBasic,
+  CollapsibleWithIcon,
+  CollapsibleControlled,
+  CollapsibleList,
+  CollapsibleWithAction,
+} from "./collapsible-client";
 
 export const collapsible = {
   name: "collapsible",
   components: {
-    CollapsibleDemo: (
-      <Collapsible className="w-full max-w-sm border rounded-md p-4">
-        <CollapsibleTrigger asChild>
-          <Button variant="ghost" className="p-0">Toggle content</Button>
-        </CollapsibleTrigger>
-        <CollapsibleContent className="mt-4">
-          Hidden content revealed on click
-        </CollapsibleContent>
-      </Collapsible>
-    ),
+    Basic: <CollapsibleBasic />,
+    "With Icon": <CollapsibleWithIcon />,
+    Controlled: <CollapsibleControlled />,
+    "List of Items": <CollapsibleList />,
+    "With Actions": <CollapsibleWithAction />,
   },
 };

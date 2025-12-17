@@ -5,9 +5,9 @@ export const alertDialog = {
   name: "alert-dialog",
   components: {
     AlertDialogDemo: (
-      <AlertDialog>
-        <AlertDialogTrigger asChild>
-          <Button variant="outline">Delete account</Button>
+      <AlertDialog >
+        <AlertDialogTrigger className="mx-auto !flex" asChild>
+          <Button  variant="outline">Delete account</Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>

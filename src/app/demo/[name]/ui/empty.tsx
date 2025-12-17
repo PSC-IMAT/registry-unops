@@ -1,12 +1,18 @@
-import { Empty } from "@/registry/onu/ui/empty";
+import {
+  EmptyBasic,
+  EmptyMuted,
+  EmptyWithActions,
+  EmptyWithIcon,
+  EmptyWithPreview,
+} from "@/app/demo/[name]/ui/empty-client";
 
 export const empty = {
   name: "empty",
   components: {
-    EmptyDemo: (
-      <Empty
-        title="No items found"
-      />
-    ),
+    Basic: <EmptyBasic />,
+    Icon: <EmptyWithIcon />,
+    Actions: <EmptyWithActions />,
+    Info: <EmptyWithPreview />,
+    Muted: <EmptyMuted />,
   },
 };

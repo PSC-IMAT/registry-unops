@@ -5,7 +5,11 @@ import { demos } from "@/app/demo/[name]/index";
 import { Renderer } from "@/app/demo/[name]/renderer";
 import { getRegistryItem } from "@/lib/registry";
 
-export const dynamic = "force-dynamic";
+export async function generateStaticParams() {
+  return Object.keys(demos).map((name) => ({
+    name,
+  }));
+}
 
 export default async function DemoPage({
   params,
@@ -14,28 +18,20 @@ export default async function DemoPage({
 }) {
   const { name } = await params;
 
-  let component;
-  try {
-    component = getRegistryItem(name);
-  } catch (error) {
+  const component = getRegistryItem(name);
+
+  if (!component) {
     notFound();
   }
 
-  console.log("", name);
-  const demo = demos[name];
-
-  if (!component || !demo) {
-    notFound();
-  }
-
-  const { components } = demo;
+  const { components } = demos[name];
 
   return (
-    <div className="flex h-screen w-full flex-col gap-4 bg-background">
+    <div className="flex min-h-screen w-full flex-col items-center gap-8 bg-background px-4 py-10">
       {components &&
         Object.entries(components).map(([key, node]) => (
-          <div className="relative w-full" key={key}>
-            <Renderer>{node}</Renderer>
+          <div className="relative m-auto w-full max-w-5xl" key={key}>
+              <Renderer>{node}</Renderer>
           </div>
         ))}
     </div>

@@ -6,7 +6,7 @@ export const drawer = {
   components: {
     DrawerDemo: (
       <Drawer>
-        <DrawerTrigger asChild>
+        <DrawerTrigger className="flex! mx-auto justify-center items-center" asChild>
           <Button variant="outline">Open drawer</Button>
         </DrawerTrigger>
         <DrawerContent>

@@ -5,7 +5,7 @@ export const card = {
   name: "card",
   components: {
     CardDemo: (
-      <Card className="w-full max-w-sm">
+      <Card className="w-full max-w-sm mx-auto">
         <CardHeader>
           <CardTitle>Project Status</CardTitle>
         </CardHeader>

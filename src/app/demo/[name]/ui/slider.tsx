@@ -1,13 +1,20 @@
-import { Slider } from "@/registry/onu/ui/slider";
+import {
+  SliderBasic,
+  SliderControlled,
+  SliderDisabled,
+  SliderRange,
+  SliderSteps,
+  SliderVertical,
+} from "@/app/demo/[name]/ui/slider-client";
 
 export const slider = {
   name: "slider",
   components: {
-    SliderDemo: (
-      <div className="w-full max-w-xs space-y-4">
-        <Slider defaultValue={[33]} max={100} step={1} />
-        <Slider defaultValue={[25, 75]} max={100} step={1} />
-      </div>
-    ),
+    Basic: <SliderBasic />,
+    Range: <SliderRange />,
+    Steps: <SliderSteps />,
+    Disabled: <SliderDisabled />,
+    Vertical: <SliderVertical />,
+    Controlled: <SliderControlled />,
   },
 };

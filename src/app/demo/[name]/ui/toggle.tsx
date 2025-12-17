@@ -1,14 +1,20 @@
-import { Toggle } from "@/registry/onu/ui/toggle";
+import {
+  ToggleBasic,
+  ToggleControlled,
+  ToggleDisabled,
+  ToggleOutline,
+  ToggleSizes,
+  ToggleWithText,
+} from "@/app/demo/[name]/ui/toggle-client";
 
 export const toggle = {
   name: "toggle",
   components: {
-    ToggleDemo: (
-      <div className="flex gap-2">
-        <Toggle>Bold</Toggle>
-        <Toggle>Italic</Toggle>
-        <Toggle>Underline</Toggle>
-      </div>
-    ),
+    Basic: <ToggleBasic />,
+    WithText: <ToggleWithText />,
+    Outline: <ToggleOutline />,
+    Sizes: <ToggleSizes />,
+    Disabled: <ToggleDisabled />,
+    Controlled: <ToggleControlled />,
   },
 };

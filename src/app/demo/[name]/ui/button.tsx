@@ -4,7 +4,7 @@ export const button = {
   name: "button",
   components: {
     ButtonDemo: (
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2 justify-center">
         <Button>Default</Button>
         <Button variant="secondary">Secondary</Button>
         <Button variant="outline">Outline</Button>

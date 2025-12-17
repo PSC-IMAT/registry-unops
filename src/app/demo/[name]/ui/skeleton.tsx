@@ -1,16 +1,18 @@
-import { Skeleton } from "@/registry/onu/ui/skeleton";
+import {
+  SkeletonAvatarText,
+  SkeletonBasic,
+  SkeletonCard,
+  SkeletonList,
+  SkeletonTable,
+} from "@/app/demo/[name]/ui/skeleton-client";
 
 export const skeleton = {
   name: "skeleton",
   components: {
-    SkeletonDemo: (
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <Skeleton className="h-4 w-full" />
-          <Skeleton className="h-4 w-full" />
-          <Skeleton className="h-4 w-1/2" />
-        </div>
-      </div>
-    ),
+    Basic: <SkeletonBasic />,
+    AvatarText: <SkeletonAvatarText />,
+    Card: <SkeletonCard />,
+    List: <SkeletonList />,
+    Table: <SkeletonTable />,
   },
 };

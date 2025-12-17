@@ -6,7 +6,7 @@ export const dropdownMenu = {
   components: {
     DropdownMenuDemo: (
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenuTrigger asChild className="flex! mx-auto justify-center items-center">
           <Button variant="outline">Menu</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>

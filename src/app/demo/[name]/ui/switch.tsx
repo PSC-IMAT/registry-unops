@@ -1,14 +1,18 @@
-import { Switch } from "@/registry/onu/ui/switch";
-import { Label } from "@/registry/onu/ui/label";
+import {
+  SwitchBasic,
+  SwitchControlled,
+  SwitchDisabled,
+  SwitchForm,
+  SwitchWithDescription,
+} from "@/app/demo/[name]/ui/switch-client";
 
 export const switchComponent = {
   name: "switch",
   components: {
-    SwitchDemo: (
-      <div className="flex items-center space-x-2">
-        <Switch id="airplane-mode" />
-        <Label htmlFor="airplane-mode">Airplane Mode</Label>
-      </div>
-    ),
+    Basic: <SwitchBasic />,
+    Disabled: <SwitchDisabled />,
+    WithDescription: <SwitchWithDescription />,
+    Controlled: <SwitchControlled />,
+    Form: <SwitchForm />,
   },
 };

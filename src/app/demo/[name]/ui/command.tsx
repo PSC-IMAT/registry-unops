@@ -4,7 +4,7 @@ export const command = {
   name: "command",
   components: {
     CommandDemo: (
-      <Command className="rounded-lg border max-w-sm">
+      <Command className="mx-auto rounded-lg border max-w-sm">
         <CommandInput placeholder="Type a command..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>

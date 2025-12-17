@@ -1,14 +1,18 @@
-import { Item } from "@/registry/onu/ui/item";
+import {
+  ItemCompactMuted,
+  ItemListBasic,
+  ItemWithHeaderFooter,
+  ItemWithIcon,
+  ItemWithImage,
+} from "@/app/demo/[name]/ui/item-client";
 
 export const item = {
   name: "item",
   components: {
-    ItemDemo: (
-      <div className="space-y-2 border rounded-md overflow-hidden">
-        <Item>Item one</Item>
-        <Item>Item two</Item>
-        <Item>Item three</Item>
-      </div>
-    ),
+    BasicList: <ItemListBasic />,
+    WithIcon: <ItemWithIcon />,
+    WithImage: <ItemWithImage />,
+    CompactMuted: <ItemCompactMuted />,
+    HeaderFooter: <ItemWithHeaderFooter />,
   },
 };

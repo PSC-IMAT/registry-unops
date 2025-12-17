@@ -38,6 +38,7 @@ import {
 } from "@/ui/sidebar";
 import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
+import { UnopsLogo } from "@/components/unops-logo";
 const uiItems = getUIPrimitives();
 const componentItems = getComponents();
 const blockItems = getBlocks();
@@ -98,7 +99,7 @@ export function RegistrySidebar() {
       <SidebarHeader className="border-b">
         <div className="flex items-center justify-between px-2 py-2">
           <Link href="/" className="flex min-w-0 items-center gap-2">
-            LOGO
+            <UnopsLogo variant="full" />
           </Link>
 
           <Button

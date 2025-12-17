@@ -22,15 +22,16 @@ import type { Component } from "@/lib/registry";
 interface ComponentCardProps {
   component: Component;
   baseUrl: string;
+  token: string;
 }
 
 export function ComponentCard({
   component,
   baseUrl,
+  token
 }: ComponentCardProps) {
   const [copied, setCopied] = useState(false);
-
-  const registryUrl = `https://${baseUrl}/r/${component.name}.json`;
+  const registryUrl = `https://${baseUrl}/r/${component.name}.json?token=${token}`;
   const npxCommand = `npx shadcn@latest add ${registryUrl}`;
 
   const copyToClipboard = async () => {

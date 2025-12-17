@@ -4,7 +4,7 @@ export const badge = {
   name: "badge",
   components: {
     BadgeDemo: (
-      <div className="flex gap-2">
+      <div className="flex gap-2 items-center justify-center">
         <Badge>Default</Badge>
         <Badge variant="secondary">Secondary</Badge>
         <Badge variant="default">Default</Badge>
