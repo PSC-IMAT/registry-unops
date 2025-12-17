@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "onu-template-registry",
-  "homepage": "https://unops.org",
+  "name": "registry-unops",
+  "homepage": "https://registry-unops.vercel.app",
   "items": [
     {
       "name": "onu-hero",
