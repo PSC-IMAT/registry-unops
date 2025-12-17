@@ -3,33 +3,30 @@
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
-import { OpenInV0Button } from "@/components/registry/open-in-v0";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/ui/card";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/ui/tooltip";
 import type { Component } from "@/lib/registry";
 
 interface ComponentCardProps {
   component: Component;
   baseUrl: string;
-  prompt: string;
 }
 
 export function ComponentCard({
   component,
   baseUrl,
-  prompt,
 }: ComponentCardProps) {
   const [copied, setCopied] = useState(false);
 
@@ -78,12 +75,6 @@ export function ComponentCard({
                     </TooltipTrigger>
                   </Tooltip>
                 </TooltipProvider>
-
-                <OpenInV0Button
-                  registryUrl={registryUrl}
-                  title={`${component.title} Kit`}
-                  prompt={prompt}
-                />
               </div>
             </div>
           </div>

@@ -1,13 +1,170 @@
 <a href="https://registry-starter.vercel.app/">
-  <h1 align="center">Registry Starter</h1>
+  <h1 align="center">ONU/UNOPS Component Registry</h1>
 </a>
 
 <p align="center">
-    Registry Starter is a free, open-source template built with Next.js and Shadcn/ui Registry to accelerate your AI-Native Design System.
+    A production-ready component registry with 19 purpose-built blocks for building data-rich analytical reports and impact dashboards.
 </p>
 
 <p align="center">
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
+  <a href="#blocks"><strong>Blocks</strong></a> ·
+  <a href="#quick-start"><strong>Quick Start</strong></a> ·
+  <a href="#development"><strong>Development</strong></a>
+</p>
+
+## Overview
+
+This registry provides a comprehensive set of blocks designed for ONU/UNOPS reports, including:
+
+- **8 Core blocks**: Hero, situation overview, key findings, impact stats, methodology, recommendations, data sources, footer
+- **5 Data storytelling blocks**: Maps, charts, before/after comparisons, timelines, regional breakdowns
+- **2 Layout/navigation blocks**: Sticky TOC, section tabs
+- **4 Communication/trust blocks**: FAQ, download center, callout alerts, credits
+
+All blocks are built with:
+- ✅ Zod validation schemas
+- ✅ TypeScript types
+- ✅ Multiple example configurations
+- ✅ Responsive layouts
+- ✅ ONU design system primitives
+
+## Blocks
+
+### Core Blocks
+
+| Block | Description | Endpoint |
+|-------|-------------|----------|
+| `onu-hero` | Landing hero with title, media, KPI cards, CTAs | `/r/onu-hero.json` |
+| `onu-situation-overview` | Structured summary with context, location, dates | `/r/onu-situation-overview.json` |
+| `onu-key-findings` | 4-8 findings with confidence levels | `/r/onu-key-findings.json` |
+| `onu-impact-stats` | KPI grid with source citations | `/r/onu-impact-stats.json` |
+| `onu-methodology` | Research methodology steps and limitations | `/r/onu-methodology.json` |
+| `onu-recommendations` | Prioritized recommendations (P1/P2/P3) | `/r/onu-recommendations.json` |
+| `onu-data-sources-disclaimer` | Data sources with licenses and disclaimers | `/r/onu-data-sources-disclaimer.json` |
+| `onu-footer` | ONU footer with partners and contacts | `/r/onu-footer.json` |
+
+### Data Storytelling Blocks
+
+| Block | Description | Endpoint |
+|-------|-------------|----------|
+| `onu-map-block` | Map placeholder with legend and filters | `/r/onu-map-block.json` |
+| `onu-chart-narrative` | Chart with narrative text | `/r/onu-chart-narrative.json` |
+| `onu-before-after-compare` | Before/after image comparison | `/r/onu-before-after-compare.json` |
+| `onu-timeline` | Chronological events display | `/r/onu-timeline.json` |
+| `onu-region-breakdown` | Regional KPI cards with drilldown | `/r/onu-region-breakdown.json` |
+
+### Layout/Navigation Blocks
+
+| Block | Description | Endpoint |
+|-------|-------------|----------|
+| `onu-sticky-toc` | Sticky table of contents | `/r/onu-sticky-toc.json` |
+| `onu-section-tabs` | Tabbed content section (2-6 tabs) | `/r/onu-section-tabs.json` |
+
+### Communication/Trust Blocks
+
+| Block | Description | Endpoint |
+|-------|-------------|----------|
+| `onu-faq` | FAQ accordion with Q&A items | `/r/onu-faq.json` |
+| `onu-download-center` | File downloads with checksums | `/r/onu-download-center.json` |
+| `onu-callout-alert` | Alert callouts (info/warn/danger/success) | `/r/onu-callout-alert.json` |
+| `onu-credits` | Team, partners, acknowledgements, funding | `/r/onu-credits.json` |
+
+## Quick Start
+
+### Installing Blocks
+
+```bash
+npx shadcn@latest add https://your-domain.com/r/onu-hero.json
+npx shadcn@latest add https://your-domain.com/r/onu-impact-stats.json
+```
+
+### Using Blocks
+
+```tsx
+import { HeroBlock } from '@/components/blocks/hero/hero';
+
+export default function Page() {
+  return (
+    <HeroBlock
+      title="Global Infrastructure Impact Report 2024"
+      subtitle="Comprehensive analysis across 45 countries"
+      kpis={[
+        { label: 'Projects', value: '1,247', change: '+23%' },
+        { label: 'Countries', value: '45' },
+      ]}
+      primaryCTA={{ label: 'Read Report', href: '#report' }}
+    />
+  );
+}
+```
+
+## Development
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or pnpm
+
+### Setup
+
+```bash
+npm install
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+- src/app: Next.js app router pages, layouts, and global styles (globals.css)
+- src/components:
+  - blocks: Application blocks wired to the demo/registry UI
+  - ui: Shared UI primitives (shadcn-based) for the site
+  - registry: Components used only by the registry UI (sidebar, logo, theme toggle, preview primitives)
+- src/hooks: Reusable React hooks
+- src/lib: Utilities and registry helpers (see src/lib/registry.ts)
+- src/layouts: Reserved for future shared layout components
+- src/registry: Source code referenced by the registry items for distribution
+- public/r: Generated JSON endpoints consumed by shadcn CLI
+
+## Where To Add Blocks/UI
+
+- Blocks: Add new blocks under src/components/blocks. Expose them via demo/registry pages as needed and list them in registry.json with type: "registry:block".
+- UI primitives: Add site-wide primitives under src/components/ui (preferred). For registry-specific preview primitives, use src/components/registry/ui.
+- Registry items: Keep registry.json at the repo root. The import @/registry resolves to registry.json via tsconfig path mapping.
+- Styles: Global styles live in src/app/globals.css and are referenced by both Next.js and the registry:theme item.
+
+### Registry Structure
+
+```
+registry/
+└── onu/
+    ├── blocks/          # 19 block components
+    ├── ui/              # Primitive components
+    ├── foundation/      # Variant types
+    └── _shared/         # Utilities
+```
+
+### Creating Custom Blocks
+
+1. Create block in `src/blocks/my-block/my-block.tsx`
+2. Define Zod schema and TypeScript types
+3. Export example configurations
+4. Add entry to `registry.json`
+5. Run `npm run build` to generate JSON endpoints
+
+## Tech Stack
+
+- **Framework**: Next.js 16 with Turbopack
+- **Styling**: Tailwind CSS v4
+- **Validation**: Zod
+- **Components**: Custom ONU primitives
+- **Registry**: Shadcn-compatible
   <a href="#open-in-v0"><strong>Open in v0</strong></a> ·
   <a href="#theming"><strong>Theming</strong></a> ·
   <a href="#mcp"><strong>MCP</strong></a> ·

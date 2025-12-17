@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-import "@/app/globals.css";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Registry Starter",

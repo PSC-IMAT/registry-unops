@@ -1,4 +1,4 @@
-import { Hero } from "@/components/hero";
+import { Hero } from "@/registry/onu/components/hero";
 
 export const hero = {
   name: "hero",

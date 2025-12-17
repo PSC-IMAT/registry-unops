@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "lib": [
       "dom",
       "dom.iterable",
@@ -20,8 +21,17 @@
       "@/*": [
         "./src/*"
       ],
+      "@/ui/*": [
+        "./src/registry/onu/ui/*"
+      ],
+      "@/demo/*": [
+        "./src/app/demo/[name]/*"
+      ],
       "@/registry": [
         "./registry.json"
+      ],
+      "@/foundation/*": [
+        "./src/registry/onu/foundation/*"
       ]
     },
     "plugins": [
@@ -29,7 +39,8 @@
         "name": "next"
       }
     ],
-    "target": "ES2017"
+    "target": "ES2017",
+    
   },
   "include": [
     "**/*.ts",

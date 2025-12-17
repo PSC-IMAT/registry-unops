@@ -1,24 +1,13 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertCircle, Terminal } from "lucide-react";
+import { Alert, AlertTitle, AlertDescription } from "@/registry/onu/ui/alert";
 
 export const alert = {
   name: "alert",
   components: {
-    Default: (
-      <Alert>
-        <Terminal className="size-4" />
+    AlertDemo: (
+      <Alert variant="default">
         <AlertTitle>Heads up!</AlertTitle>
         <AlertDescription>
-          You can add components to your app using the cli.
-        </AlertDescription>
-      </Alert>
-    ),
-    Destructive: (
-      <Alert variant="destructive">
-        <AlertCircle className="size-4" />
-        <AlertTitle>Error</AlertTitle>
-        <AlertDescription>
-          Your session has expired. Please log in again.
+          You can use alerts to notify users of important information.
         </AlertDescription>
       </Alert>
     ),

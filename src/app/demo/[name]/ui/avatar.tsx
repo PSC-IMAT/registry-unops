@@ -1,23 +1,18 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/onu/ui/avatar";
 
 export const avatar = {
   name: "avatar",
   components: {
-    Default: (
-      <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback className="bg-primary text-primary-foreground">
-          <span className="text-xs">CN</span>
-        </AvatarFallback>
-      </Avatar>
-    ),
-    Fallback: (
-      <Avatar>
-        <AvatarImage src="https://github.com" alt="@shadcn" />
-        <AvatarFallback className="bg-primary text-primary-foreground">
-          <span className="text-xs">CN</span>
-        </AvatarFallback>
-      </Avatar>
+    AvatarDemo: (
+      <div className="flex gap-4">
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <Avatar>
+          <AvatarFallback>JD</AvatarFallback>
+        </Avatar>
+      </div>
     ),
   },
 };

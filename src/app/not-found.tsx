@@ -1,37 +1,34 @@
 import Link from "next/link";
-
-import {
-  MobileSidebarTrigger,
-  RegistrySidebar,
-} from "@/components/registry/registry-sidebar";
-import { Button } from "@/components/ui/button";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/ui/sonner";
 
 export default function NotFound() {
   return (
-    <SidebarProvider>
-      <MobileSidebarTrigger />
-      <RegistrySidebar />
-      <main className="flex w-full justify-center">
-        <div className="flex min-h-screen w-full flex-col items-center justify-center text-center">
-          <h1 className="font-bold text-6xl text-muted-foreground tracking-tight md:text-8xl">
+    <>
+      <main className="flex min-h-screen w-full flex-col items-center justify-center text-center">
+        <div className="space-y-4">
+          <h1 className="text-6xl font-bold tracking-tight text-muted-foreground md:text-8xl">
             404
           </h1>
-          <h2 className="mt-8 font-semibold text-2xl tracking-tight md:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
             Page Not Found
           </h2>
-          <div className="mt-8 flex gap-3">
-            <Button asChild>
-              <Link href="/">Go Home</Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link href="/r/registry.json">View Registry</Link>
-            </Button>
+          <div className="mt-8 flex gap-3 justify-center">
+            <Link
+              href="/"
+              className="rounded bg-primary px-4 py-2 font-medium text-primary-foreground hover:opacity-90"
+            >
+              Go Home
+            </Link>
+            <Link
+              href="/r/registry.json"
+              className="rounded border px-4 py-2 font-medium hover:bg-muted"
+            >
+              View Registry
+            </Link>
           </div>
         </div>
       </main>
       <Toaster />
-    </SidebarProvider>
+    </>
   );
 }

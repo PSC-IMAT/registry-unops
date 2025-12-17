@@ -1,31 +1,19 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/registry/onu/ui/card";
+import { Button } from "@/registry/onu/ui/button";
 
 export const card = {
   name: "card",
   components: {
-    Default: (
-      <Card className="w-[350px]">
+    CardDemo: (
+      <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle>Create project</CardTitle>
-          <CardDescription>
-            Deploy your new project in one-click.
-          </CardDescription>
+          <CardTitle>Project Status</CardTitle>
         </CardHeader>
         <CardContent>
-          <p>This is the content of a card!</p>
+          <p className="text-sm text-muted-foreground">All systems operational.</p>
         </CardContent>
-
-        <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
-          <Button>Create</Button>
+        <CardFooter>
+          <Button>View details</Button>
         </CardFooter>
       </Card>
     ),

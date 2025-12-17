@@ -5,11 +5,7 @@ import { demos } from "@/app/demo/[name]/index";
 import { Renderer } from "@/app/demo/[name]/renderer";
 import { getRegistryItem } from "@/lib/registry";
 
-export async function generateStaticParams() {
-  return Object.keys(demos).map((name) => ({
-    name,
-  }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function DemoPage({
   params,
@@ -18,16 +14,24 @@ export default async function DemoPage({
 }) {
   const { name } = await params;
 
-  const component = getRegistryItem(name);
-
-  if (!component) {
+  let component;
+  try {
+    component = getRegistryItem(name);
+  } catch (error) {
     notFound();
   }
 
-  const { components } = demos[name];
+  console.log("", name);
+  const demo = demos[name];
+
+  if (!component || !demo) {
+    notFound();
+  }
+
+  const { components } = demo;
 
   return (
-    <div className="flex h-[100vh] w-full flex-col gap-4 bg-card">
+    <div className="flex h-screen w-full flex-col gap-4 bg-background">
       {components &&
         Object.entries(components).map(([key, node]) => (
           <div className="relative w-full" key={key}>

@@ -1,18 +1,14 @@
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/registry/onu/ui/checkbox";
+import { Text } from "@/registry/onu/ui/text";
 
 export const checkbox = {
   name: "checkbox",
   components: {
-    Default: (
-      <div className="flex items-center space-x-2">
-        <Checkbox id="terms" />
-        <label
-          htmlFor="terms"
-          className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        >
-          Accept terms and conditions
-        </label>
-      </div>
+    CheckboxDemo: (
+      <label className="flex items-center gap-2">
+        <Checkbox defaultChecked />
+        <Text>Accept terms</Text>
+      </label>
     ),
   },
 };
