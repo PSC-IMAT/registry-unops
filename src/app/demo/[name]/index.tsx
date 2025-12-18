@@ -20,6 +20,11 @@ import { sectionTabs } from "@/app/demo/[name]/blocks/section-tabs";
 import { situationOverview } from "@/app/demo/[name]/blocks/situation-overview";
 import { stickyToc } from "@/app/demo/[name]/blocks/sticky-toc";
 import { timeline } from "@/app/demo/[name]/blocks/timeline";
+import { damageHero } from "@/app/demo/[name]/blocks/damage-hero";
+import { damageBottomNav } from "@/app/demo/[name]/blocks/damage-bottom-nav";
+import { damageBaseline } from "@/app/demo/[name]/blocks/damage-baseline";
+import { damageMonitoring } from "@/app/demo/[name]/blocks/damage-monitoring";
+import { damageDashboard } from "@/app/demo/[name]/blocks/damage-dashboard";
 
 // components
 import { hero } from "@/app/demo/[name]/components/hero";
@@ -116,6 +121,7 @@ export const demos: { [name: string]: Demo } = {
   "onu-situation-overview": situationOverview,
   "onu-sticky-toc": stickyToc,
   "onu-timeline": timeline,
+  // Damage Assessment blocks are available via dedicated pages (see /demo/* routes)
 
   // components
   hero,

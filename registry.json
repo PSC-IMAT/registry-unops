@@ -8,650 +8,957 @@
       "type": "registry:block",
       "title": "Hero Block",
       "description": "Hero landing section with title, subtitle, media (image/video), KPI cards, and CTAs",
-      "files": [{ "path": "src/registry/onu/blocks/hero.tsx", "type": "registry:block" }]
+      "files": [
+        { "path": "src/registry/onu/blocks/hero.tsx", "type": "registry:block" }
+      ]
     },
     {
       "name": "onu-situation-overview",
       "type": "registry:block",
       "title": "Situation Overview",
       "description": "Structured summary with context, location, key dates, what happened, and why it matters",
-      "files": [{ "path": "src/registry/onu/blocks/situation-overview.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/situation-overview.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-key-findings",
       "type": "registry:block",
       "title": "Key Findings",
       "description": "Display 4-8 findings with icon, tag, and confidence level",
-      "files": [{ "path": "src/registry/onu/blocks/key-findings.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/key-findings.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-impact-stats",
       "type": "registry:block",
       "title": "Impact Statistics",
       "description": "KPI grid with optional note and source",
-      "files": [{ "path": "src/registry/onu/blocks/impact-stats.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/impact-stats.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-methodology",
       "type": "registry:block",
       "title": "Methodology",
       "description": "Research methodology steps, limitations, interpretation notes, and data sources",
-      "files": [{ "path": "src/registry/onu/blocks/methodology.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/methodology.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-recommendations",
       "type": "registry:block",
       "title": "Recommendations",
       "description": "Prioritized recommendations (P1/P2/P3) with owner, timeframe, and impact",
-      "files": [{ "path": "src/registry/onu/blocks/recommendations.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/recommendations.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-data-sources-disclaimer",
       "type": "registry:block",
       "title": "Data Sources & Disclaimer",
       "description": "Data sources with licenses, last updated, limitations, and disclaimer",
-      "files": [{ "path": "src/registry/onu/blocks/data-sources-disclaimer.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/data-sources-disclaimer.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-footer",
       "type": "registry:block",
       "title": "Footer",
       "description": "ONU footer with partner logos, contacts, legal links, prepared-by, and date/version",
-      "files": [{ "path": "src/registry/onu/blocks/footer-onu.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/footer-onu.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-map-block",
       "type": "registry:block",
       "title": "Map Block",
       "description": "Map placeholder with legend, filters, and selected feature panel",
-      "files": [{ "path": "src/registry/onu/blocks/map-block.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/map-block.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-chart-narrative",
       "type": "registry:block",
       "title": "Chart with Narrative",
       "description": "Chart placeholder (bar/line/donut) with narrative text and methodology",
-      "files": [{ "path": "src/registry/onu/blocks/chart-narrative.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/chart-narrative.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-before-after-compare",
       "type": "registry:block",
       "title": "Before/After Comparison",
       "description": "Before/after image comparison with captions and sources",
-      "files": [{ "path": "src/registry/onu/blocks/before-after-compare.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/before-after-compare.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-timeline",
       "type": "registry:block",
       "title": "Timeline",
       "description": "Chronological events with date, title, description, and optional tag",
-      "files": [{ "path": "src/registry/onu/blocks/timeline.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/timeline.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-region-breakdown",
       "type": "registry:block",
       "title": "Region Breakdown",
       "description": "Regional KPI cards with drilldown links",
-      "files": [{ "path": "src/registry/onu/blocks/region-breakdown.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/region-breakdown.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-sticky-toc",
       "type": "registry:block",
       "title": "Sticky Table of Contents",
       "description": "Sticky table of contents with heading links and last updated label",
-      "files": [{ "path": "src/registry/onu/blocks/sticky-toc.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/sticky-toc.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-section-tabs",
       "type": "registry:block",
       "title": "Section Tabs",
       "description": "Tabbed content section with 2-6 tabs",
-      "files": [{ "path": "src/registry/onu/blocks/section-tabs.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/section-tabs.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-faq",
       "type": "registry:block",
       "title": "FAQ",
       "description": "FAQ accordion with expandable Q&A items",
-      "files": [{ "path": "src/registry/onu/blocks/faq.tsx", "type": "registry:block" }]
+      "files": [
+        { "path": "src/registry/onu/blocks/faq.tsx", "type": "registry:block" }
+      ]
     },
     {
       "name": "onu-download-center",
       "type": "registry:block",
       "title": "Download Center",
       "description": "File download links with format badges, file sizes, and checksums",
-      "files": [{ "path": "src/registry/onu/blocks/download-center.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/download-center.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-callout-alert",
       "type": "registry:block",
       "title": "Callout Alert",
       "description": "Callout alert with info/warn/danger/success variants and optional actions",
-      "files": [{ "path": "src/registry/onu/blocks/callout-alert.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/callout-alert.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "onu-credits",
       "type": "registry:block",
       "title": "Credits",
       "description": "Credits section with team, partners, acknowledgements, and funding info",
-      "files": [{ "path": "src/registry/onu/blocks/credits.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/credits.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "damage-hero",
+      "type": "registry:block",
+      "title": "Damage: Hero",
+      "description": "Hero for Damage Assessment site with optional background image/overlay and CTA",
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/damage-hero.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "damage-bottom-nav",
+      "type": "registry:block",
+      "title": "Damage: Bottom Navigation",
+      "description": "Sticky bottom navigation with scroll spy across key sections",
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/bottom-nav.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "damage-baseline",
+      "type": "registry:block",
+      "title": "Damage: Baseline",
+      "description": "Baseline section with video/categories, 3-step scroll story, and partners",
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/baseline.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "damage-monitoring",
+      "type": "registry:block",
+      "title": "Damage: Monitoring",
+      "description": "Monitoring section embedding a webapp with toolbar and actions",
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/monitoring.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "damage-dashboard",
+      "type": "registry:block",
+      "title": "Damage: Dashboard",
+      "description": "Damage dashboard embed with loading and error state",
+      "files": [
+        {
+          "path": "src/registry/onu/blocks/damage-dashboard.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",
       "description": "Accordion with collapsible items and controlled state",
-      "files": [{ "path": "src/registry/onu/ui/accordion.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/accordion.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "Alert Dialog",
       "description": "Confirmation modal for destructive or important actions",
-      "files": [{ "path": "src/registry/onu/ui/alert-dialog.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "src/registry/onu/ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "alert",
       "type": "registry:ui",
       "title": "Alert",
       "description": "Inline status banner with icon, title, and description",
-      "files": [{ "path": "src/registry/onu/ui/alert.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/alert.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "aspect-ratio",
       "type": "registry:ui",
       "title": "Aspect Ratio",
       "description": "Wrapper that locks media to a fixed aspect ratio",
-      "files": [{ "path": "src/registry/onu/ui/aspect-ratio.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "src/registry/onu/ui/aspect-ratio.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
       "description": "User avatar with fallback initials and status",
-      "files": [{ "path": "src/registry/onu/ui/avatar.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/avatar.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "badge",
       "type": "registry:ui",
       "title": "Badge",
       "description": "Small pill badge with variants for status chips",
-      "files": [{ "path": "src/registry/onu/ui/badge.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/badge.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "breadcrumb",
       "type": "registry:ui",
       "title": "Breadcrumb",
       "description": "Hierarchical breadcrumb navigation trail",
-      "files": [{ "path": "src/registry/onu/ui/breadcrumb.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/breadcrumb.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "button-group",
       "type": "registry:ui",
       "title": "Button Group",
       "description": "Grouped buttons with shared styling and spacing",
-      "files": [{ "path": "src/registry/onu/ui/button-group.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "src/registry/onu/ui/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
       "description": "Primary button component with variants and sizes",
-      "files": [{ "path": "src/registry/onu/ui/button.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/button.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "calendar",
       "type": "registry:ui",
       "title": "Calendar",
       "description": "Date picker calendar built on radix primitives",
-      "files": [{ "path": "src/registry/onu/ui/calendar.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/calendar.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "card",
       "type": "registry:ui",
       "title": "Card",
       "description": "Card container with header, content, and footer slots",
-      "files": [{ "path": "src/registry/onu/ui/card.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/card.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "carousel",
       "type": "registry:ui",
       "title": "Carousel",
       "description": "Embla-based carousel for sliding content",
-      "files": [{ "path": "src/registry/onu/ui/carousel.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/carousel.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "chart",
       "type": "registry:ui",
       "title": "Chart",
       "description": "Recharts wrapper for responsive charts",
-      "files": [{ "path": "src/registry/onu/ui/chart.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/chart.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
       "description": "Checkbox input with indeterminate support",
-      "files": [{ "path": "src/registry/onu/ui/checkbox.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/checkbox.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "code",
       "type": "registry:ui",
       "title": "Code",
       "description": "Inline and block code styling with copy support",
-      "files": [{ "path": "src/registry/onu/ui/code.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/code.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "collapsible",
       "type": "registry:ui",
       "title": "Collapsible",
       "description": "Toggleable collapsible content region",
-      "files": [{ "path": "src/registry/onu/ui/collapsible.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/collapsible.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "command",
       "type": "registry:ui",
       "title": "Command",
       "description": "Command palette component with search and groups",
-      "files": [{ "path": "src/registry/onu/ui/command.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/command.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "context-menu",
       "type": "registry:ui",
       "title": "Context Menu",
       "description": "Right-click context menu with sections and shortcuts",
-      "files": [{ "path": "src/registry/onu/ui/context-menu.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "src/registry/onu/ui/context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
       "description": "Modal dialog with overlay, title, and actions",
-      "files": [{ "path": "src/registry/onu/ui/dialog.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/dialog.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "divider",
       "type": "registry:ui",
       "title": "Divider",
       "description": "Horizontal rule separator with label support",
-      "files": [{ "path": "src/registry/onu/ui/divider.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/divider.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "drawer",
       "type": "registry:ui",
       "title": "Drawer",
       "description": "Slide-in drawer panel from any edge",
-      "files": [{ "path": "src/registry/onu/ui/drawer.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/drawer.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "dropdown-menu",
       "type": "registry:ui",
       "title": "Dropdown Menu",
       "description": "Menu button with nested items and shortcuts",
-      "files": [{ "path": "src/registry/onu/ui/dropdown-menu.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "src/registry/onu/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "empty",
       "type": "registry:ui",
       "title": "Empty State",
       "description": "Empty state illustration with message and action",
-      "files": [{ "path": "src/registry/onu/ui/empty.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/empty.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "field",
       "type": "registry:ui",
       "title": "Field",
       "description": "Form field wrapper with label, hint, and error",
-      "files": [{ "path": "src/registry/onu/ui/field.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/field.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "form",
       "type": "registry:ui",
       "title": "Form",
       "description": "React Hook Form + Zod wiring helpers",
-      "files": [{ "path": "src/registry/onu/ui/form.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/form.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "heading",
       "type": "registry:ui",
       "title": "Heading",
       "description": "Typographic heading styles with levels",
-      "files": [{ "path": "src/registry/onu/ui/heading.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/heading.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "hover-card",
       "type": "registry:ui",
       "title": "Hover Card",
       "description": "Hover-triggered card for previews and metadata",
-      "files": [{ "path": "src/registry/onu/ui/hover-card.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/hover-card.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "image",
       "type": "registry:ui",
       "title": "Image",
       "description": "Responsive image with ratio, caption, and fallback",
-      "files": [{ "path": "src/registry/onu/ui/image.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/image.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "input-group",
       "type": "registry:ui",
       "title": "Input Group",
       "description": "Input with leading/trailing slots and adornments",
-      "files": [{ "path": "src/registry/onu/ui/input-group.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/input-group.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "input-otp",
       "type": "registry:ui",
       "title": "Input OTP",
       "description": "One-time-passcode segmented input",
-      "files": [{ "path": "src/registry/onu/ui/input-otp.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/input-otp.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
       "description": "Text input with focus ring and disabled states",
-      "files": [{ "path": "src/registry/onu/ui/input.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/input.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "item",
       "type": "registry:ui",
       "title": "Item",
       "description": "Generic item wrapper for lists and menus",
-      "files": [{ "path": "src/registry/onu/ui/item.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/item.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "kbd",
       "type": "registry:ui",
       "title": "Kbd",
       "description": "Keyboard key hint badge",
-      "files": [{ "path": "src/registry/onu/ui/kbd.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/kbd.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
       "description": "Accessible form label tied to inputs",
-      "files": [{ "path": "src/registry/onu/ui/label.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/label.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "link",
       "type": "registry:ui",
       "title": "Link",
       "description": "Styled anchor with external icon handling",
-      "files": [{ "path": "src/registry/onu/ui/link.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/link.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "list",
       "type": "registry:ui",
       "title": "List",
       "description": "Ordered and unordered lists with spacing and markers",
-      "files": [{ "path": "src/registry/onu/ui/list.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/list.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "menubar",
       "type": "registry:ui",
       "title": "Menubar",
       "description": "Top menu bar with dropdown menus",
-      "files": [{ "path": "src/registry/onu/ui/menubar.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/menubar.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "navigation-menu",
       "type": "registry:ui",
       "title": "Navigation Menu",
       "description": "Navigation menu with flyouts and columns",
-      "files": [{ "path": "src/registry/onu/ui/navigation-menu.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "src/registry/onu/ui/navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "pagination",
       "type": "registry:ui",
       "title": "Pagination",
       "description": "Pagination controls with page buttons and shortcuts",
-      "files": [{ "path": "src/registry/onu/ui/pagination.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/pagination.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
       "description": "Positioned popover for contextual content",
-      "files": [{ "path": "src/registry/onu/ui/popover.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/popover.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "progress",
       "type": "registry:ui",
       "title": "Progress",
       "description": "Determinate progress bar",
-      "files": [{ "path": "src/registry/onu/ui/progress.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/progress.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "radio-group",
       "type": "registry:ui",
       "title": "Radio Group",
       "description": "Grouped radio inputs with keyboard support",
-      "files": [{ "path": "src/registry/onu/ui/radio-group.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/radio-group.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "resizable",
       "type": "registry:ui",
       "title": "Resizable",
       "description": "Resizable panels with draggable handles",
-      "files": [{ "path": "src/registry/onu/ui/resizable.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/resizable.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "scroll-area",
       "type": "registry:ui",
       "title": "Scroll Area",
       "description": "Custom scroll area with styled scrollbar",
-      "files": [{ "path": "src/registry/onu/ui/scroll-area.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/scroll-area.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "section",
       "type": "registry:ui",
       "title": "Section",
       "description": "Layout section with max-width and spacing helpers",
-      "files": [{ "path": "src/registry/onu/ui/section.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/section.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "select",
       "type": "registry:ui",
       "title": "Select",
       "description": "Select dropdown with search and keyboard nav",
-      "files": [{ "path": "src/registry/onu/ui/select.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/select.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "separator",
       "type": "registry:ui",
       "title": "Separator",
       "description": "Thin separator for grouping content",
-      "files": [{ "path": "src/registry/onu/ui/separator.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/separator.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "sheet",
       "type": "registry:ui",
       "title": "Sheet",
       "description": "Overlay sheet component with header and actions",
-      "files": [{ "path": "src/registry/onu/ui/sheet.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/sheet.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "sidebar",
       "type": "registry:ui",
       "title": "Sidebar",
       "description": "Application sidebar layout with collapsible sections",
-      "files": [{ "path": "src/registry/onu/ui/sidebar.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/sidebar.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "skeleton",
       "type": "registry:ui",
       "title": "Skeleton",
       "description": "Loading skeleton placeholders",
-      "files": [{ "path": "src/registry/onu/ui/skeleton.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/skeleton.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
       "description": "Range slider with single or multiple thumbs",
-      "files": [{ "path": "src/registry/onu/ui/slider.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/slider.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "sonner",
       "type": "registry:ui",
       "title": "Sonner",
       "description": "Toast notifications powered by sonner",
-      "files": [{ "path": "src/registry/onu/ui/sonner.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/sonner.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "spinner",
       "type": "registry:ui",
       "title": "Spinner",
       "description": "Loading spinner indicator",
-      "files": [{ "path": "src/registry/onu/ui/spinner.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/spinner.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
       "description": "Toggle switch with accessibility support",
-      "files": [{ "path": "src/registry/onu/ui/switch.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/switch.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "table",
       "type": "registry:ui",
       "title": "Table",
       "description": "Responsive table with variants and density options",
-      "files": [{ "path": "src/registry/onu/ui/table.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/table.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
       "description": "Tabs with keyboard navigation and variants",
-      "files": [{ "path": "src/registry/onu/ui/tabs.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/tabs.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "text",
       "type": "registry:ui",
       "title": "Text",
       "description": "Text component with semantic sizes and weights",
-      "files": [{ "path": "src/registry/onu/ui/text.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/text.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",
       "description": "Multi-line text input with autosize styling",
-      "files": [{ "path": "src/registry/onu/ui/textarea.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/textarea.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "toggle-group",
       "type": "registry:ui",
       "title": "Toggle Group",
       "description": "Grouped toggles with single or multiple selection",
-      "files": [{ "path": "src/registry/onu/ui/toggle-group.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "src/registry/onu/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "toggle",
       "type": "registry:ui",
       "title": "Toggle",
       "description": "Pressable toggle button with variants",
-      "files": [{ "path": "src/registry/onu/ui/toggle.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/toggle.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "tooltip",
       "type": "registry:ui",
       "title": "Tooltip",
       "description": "Tooltip with delay and arrow support",
-      "files": [{ "path": "src/registry/onu/ui/tooltip.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/tooltip.tsx", "type": "registry:ui" }
+      ]
     },
     {
       "name": "video",
       "type": "registry:ui",
       "title": "Video",
       "description": "Video player wrapper with poster and controls",
-      "files": [{ "path": "src/registry/onu/ui/video.tsx", "type": "registry:ui" }]
+      "files": [
+        { "path": "src/registry/onu/ui/video.tsx", "type": "registry:ui" }
+      ]
     },
-        {
+    {
       "name": "hero",
       "type": "registry:component",
       "title": "Hero Block",
       "description": "Hero landing section with title, subtitle, media (image/video), KPI cards, and CTAs",
-      "files": [{ "path": "src/registry/onu/components/hero.tsx", "type": "registry:component" }]
+      "files": [
+        {
+          "path": "src/registry/onu/components/hero.tsx",
+          "type": "registry:component"
+        }
+      ]
     },
     {
       "name": "theme",
       "type": "registry:theme",
-      "title": "Nature Theme",
-      "description": "A nature theme and styles with greens and browns using Tailwind and shadcn/ui variable names",
+      "title": "Project Theme",
+      "description": "Theme tokens aligned with app/globals.css (:root + .dark).",
       "cssVars": {
         "light": {
-          "background": "oklch(0.97 0.01 80.72)",
-          "foreground": "oklch(0.3 0.04 30.2)",
-          "card": "oklch(0.97 0.01 80.72)",
-          "card-foreground": "oklch(0.3 0.04 30.2)",
-          "popover": "oklch(0.97 0.01 80.72)",
-          "popover-foreground": "oklch(0.3 0.04 30.2)",
-          "primary": "oklch(0.52 0.13 144.17)",
-          "primary-foreground": "oklch(1.0 0 0)",
-          "secondary": "oklch(0.96 0.02 147.64)",
-          "secondary-foreground": "oklch(0.43 0.12 144.31)",
-          "muted": "oklch(0.94 0.01 74.42)",
-          "muted-foreground": "oklch(0.45 0.05 39.21)",
-          "accent": "oklch(0.9 0.05 146.04)",
-          "accent-foreground": "oklch(0.43 0.12 144.31)",
-          "destructive": "oklch(0.54 0.19 26.72)",
-          "destructive-foreground": "oklch(1.0 0 0)",
-          "border": "oklch(0.88 0.02 74.64)",
-          "input": "oklch(0.88 0.02 74.64)",
-          "ring": "oklch(0.52 0.13 144.17)",
-          "chart-1": "oklch(0.67 0.16 144.21)",
-          "chart-2": "oklch(0.58 0.14 144.18)",
-          "chart-3": "oklch(0.52 0.13 144.17)",
-          "chart-4": "oklch(0.43 0.12 144.31)",
-          "chart-5": "oklch(0.22 0.05 145.73)",
-          "sidebar": "oklch(0.94 0.01 74.42)",
-          "sidebar-foreground": "oklch(0.3 0.04 30.2)",
-          "sidebar-primary": "oklch(0.52 0.13 144.17)",
-          "sidebar-primary-foreground": "oklch(1.0 0 0)",
-          "sidebar-accent": "oklch(0.9 0.05 146.04)",
-          "sidebar-accent-foreground": "oklch(0.43 0.12 144.31)",
-          "sidebar-border": "oklch(0.88 0.02 74.64)",
-          "sidebar-ring": "oklch(0.52 0.13 144.17)",
-          "radius": "0.5rem"
+          "background": "oklch(0.97 0 0)",
+          "foreground": "oklch(0.205 0 0)",
+          "card": "oklch(0.985 0 0)",
+          "card-foreground": "oklch(0.205 0 0)",
+          "popover": "oklch(0.985 0 0)",
+          "popover-foreground": "oklch(0.205 0 0)",
+          "primary": "oklch(0.828 0.111 230.318)",
+          "primary-foreground": "oklch(0.205 0 0)",
+          "secondary": "oklch(0.556 0 0 / 0.075)",
+          "secondary-foreground": "oklch(0.205 0 0)",
+          "muted": "oklch(0.922 0 0)",
+          "muted-foreground": "oklch(0.205 0 0 / 0.7)",
+          "accent": "oklch(0.97 0 0)",
+          "accent-foreground": "oklch(0.205 0 0)",
+          "destructive": "oklch(0.808 0.114 19.571)",
+          "destructive-foreground": "oklch(0.577 0.245 27.325)",
+          "border": "oklch(0.708 0 0 / 0.3)",
+          "input": "oklch(0.205 0 0 / 0.15)",
+          "ring": "oklch(0.828 0.111 230.318)",
+          "chart-1": "oklch(0.685 0.169 237.323)",
+          "chart-2": "oklch(0.789 0.154 211.53)",
+          "chart-3": "oklch(0.627 0.265 303.9)",
+          "chart-4": "oklch(0.852 0.199 91.936)",
+          "chart-5": "oklch(0.685 0.169 237.323)",
+          "sidebar": "oklch(0.97 0 0)",
+          "sidebar-foreground": "oklch(0.205 0 0)",
+          "sidebar-primary": "oklch(0 0 0 / 0.85)",
+          "sidebar-primary-foreground": "oklch(1 0 0 / 0.85)",
+          "sidebar-accent": "oklch(0.556 0 0 / 0.1)",
+          "sidebar-accent-foreground": "oklch(0.205 0 0)",
+          "sidebar-border": "oklch(0.205 0 0 / 0.125)",
+          "sidebar-ring": "oklch(0.588 0.158 241.966)",
+          "radius": "0.625rem",
+          "font-sans": "system-ui, sans-serif",
+          "primary-light": "oklch(0.901 0.058 230.902)",
+          "primary-dark": "oklch(0.828 0.111 230.318)",
+          "primary-ring": "oklch(0.746 0.16 232.661)"
         },
         "dark": {
-          "background": "oklch(0.15 0.01 74.42)",
-          "foreground": "oklch(0.95 0.02 80.72)",
-          "card": "oklch(0.12 0.01 80.72)",
-          "card-foreground": "oklch(0.95 0.02 80.72)",
-          "popover": "oklch(0.12 0.01 80.72)",
-          "popover-foreground": "oklch(0.95 0.02 80.72)",
-          "primary": "oklch(0.58 0.15 144.17)",
-          "primary-foreground": "oklch(0.09 0.01 80.72)",
-          "secondary": "oklch(0.15 0.02 147.64)",
-          "secondary-foreground": "oklch(0.65 0.12 144.31)",
-          "muted": "oklch(0.18 0.01 74.42)",
-          "muted-foreground": "oklch(0.65 0.03 74.42)",
-          "accent": "oklch(0.22 0.04 146.04)",
-          "accent-foreground": "oklch(0.65 0.12 144.31)",
-          "destructive": "oklch(0.62 0.22 26.72)",
-          "destructive-foreground": "oklch(0.95 0.02 80.72)",
-          "border": "oklch(0.22 0.02 74.64)",
-          "input": "oklch(0.22 0.02 74.64)",
-          "ring": "oklch(0.58 0.15 144.17)",
-          "chart-1": "oklch(0.72 0.16 144.21)",
-          "chart-2": "oklch(0.63 0.14 144.18)",
-          "chart-3": "oklch(0.58 0.15 144.17)",
-          "chart-4": "oklch(0.48 0.12 144.31)",
-          "chart-5": "oklch(0.35 0.08 145.73)",
-          "sidebar": "oklch(0.15 0.01 74.42)",
-          "sidebar-foreground": "oklch(0.95 0.02 80.72)",
-          "sidebar-primary": "oklch(0.58 0.15 144.17)",
-          "sidebar-primary-foreground": "oklch(0.09 0.01 80.72)",
-          "sidebar-accent": "oklch(0.22 0.04 146.04)",
-          "sidebar-accent-foreground": "oklch(0.65 0.12 144.31)",
-          "sidebar-border": "oklch(0.22 0.02 74.64)",
-          "sidebar-ring": "oklch(0.58 0.15 144.17)",
-          "radius": "0.5rem"
+          "background": "oklch(0.205 0 0)",
+          "foreground": "oklch(0.97 0 0)",
+          "card": "oklch(0.25 0 0)",
+          "card-foreground": "oklch(0.97 0 0)",
+          "popover": "oklch(0.25 0 0)",
+          "popover-foreground": "oklch(0.97 0 0)",
+          "primary": "oklch(0.828 0.111 230.318)",
+          "primary-foreground": "oklch(0.97 0 0)",
+          "secondary": "oklch(0.97 0 0 / 0.1)",
+          "secondary-foreground": "oklch(0.97 0 0)",
+          "muted": "oklch(0.35 0 0)",
+          "muted-foreground": "oklch(0.97 0 0 / 0.7)",
+          "accent": "oklch(0.3 0 0)",
+          "accent-foreground": "oklch(0.97 0 0)",
+          "destructive": "oklch(0.577 0.245 27.325)",
+          "destructive-foreground": "oklch(0.97 0 0)",
+          "border": "oklch(0.97 0 0 / 0.15)",
+          "input": "oklch(0.97 0 0 / 0.15)",
+          "ring": "oklch(0.828 0.111 230.318)",
+          "chart-1": "oklch(0.685 0.169 237.323)",
+          "chart-2": "oklch(0.789 0.154 211.53)",
+          "chart-3": "oklch(0.627 0.265 303.9)",
+          "chart-4": "oklch(0.852 0.199 91.936)",
+          "chart-5": "oklch(0.685 0.169 237.323)",
+          "sidebar": "oklch(0.205 0 0)",
+          "sidebar-foreground": "oklch(0.97 0 0)",
+          "sidebar-primary": "oklch(1 0 0 / 0.85)",
+          "sidebar-primary-foreground": "oklch(0.205 0 0)",
+          "sidebar-accent": "oklch(0.97 0 0 / 0.1)",
+          "sidebar-accent-foreground": "oklch(0.97 0 0)",
+          "sidebar-border": "oklch(0.97 0 0 / 0.125)",
+          "sidebar-ring": "oklch(0.588 0.158 241.966)",
+          "radius": "0.625rem",
+          "font-sans": "system-ui, sans-serif",
+          "primary-light": "oklch(0.901 0.058 230.902)",
+          "primary-dark": "oklch(0.828 0.111 230.318)",
+          "primary-ring": "oklch(0.746 0.16 232.661)"
         }
       },
       "dependencies": ["radix-ui"],

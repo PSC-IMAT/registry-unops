@@ -17,3 +17,8 @@ export { footerOnu } from "./footer-onu";
 export { mapBlock } from "./map-block";
 export { methodology } from "./methodology";
 export { recommendations } from "./recommendations";
+export { damageHero } from "./damage-hero";
+export { damageBottomNav } from "./damage-bottom-nav";
+export { damageBaseline } from "./damage-baseline";
+export { damageMonitoring } from "./damage-monitoring";
+export { damageDashboard } from "./damage-dashboard";

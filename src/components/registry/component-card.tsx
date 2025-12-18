@@ -31,7 +31,7 @@ export function ComponentCard({
   token
 }: ComponentCardProps) {
   const [copied, setCopied] = useState(false);
-  const registryUrl = `https://${baseUrl}/r/${component.name}.json?token=${token}`;
+  const registryUrl = `'https://${baseUrl}/r/${component.name}.json?token=${token}'`;
   const npxCommand = `npx shadcn@latest add ${registryUrl}`;
 
   const copyToClipboard = async () => {
