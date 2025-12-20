@@ -4,10 +4,11 @@
 
 import React from 'react';
 import { z } from 'zod';
-import { Section } from '@/ui/section';
-import { Heading } from '@/ui/heading';
-import { Text } from '@/registry/onu/ui/text';
-import { Badge } from '@/ui/badge';
+import { Section } from '@/components/ui/section';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 
 const TimelineEventSchema = z.object({
   date: z.string(),
@@ -30,39 +31,43 @@ export const TimelineBlock: React.FC<TimelineBlockProps> = ({
   className,
 }) => {
   return (
-    <Section spacing="lg" className={className}>
-      <div className="space-y-6">
-        <Heading level="h2" weight="bold">
+    <Section spacing="lg" className={cn('bg-linear-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden', className)}>
+      {/* Decorative elements */}
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full blur-3xl opacity-10" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-300 rounded-full blur-3xl opacity-10" />
+      
+      <div className="relative z-10 space-y-8">
+        <Heading level="h2" weight="bold" className="text-3xl text-slate-900">
           {title}
         </Heading>
 
-        <div className="relative space-y-8">
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-300" />
+        <div className="relative space-y-6">
+          <div className="absolute left-6 top-0 bottom-0 w-1 bg-linear-to-b from-blue-500 to-blue-200" />
 
           {events.map((event, index) => (
-            <div key={index} className="relative flex gap-6">
-              <div className="flex flex-col items-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-white font-bold z-10">
+            <div key={index} className="relative flex gap-8 pl-20">
+              <div className="absolute left-0 flex flex-col items-center">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-linear-to-br from-blue-600 to-blue-700 text-white font-bold z-10 shadow-lg">
                   {index + 1}
                 </div>
               </div>
 
-              <div className="flex-1 pb-8">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-3">
-                    <Text weight="bold" className="text-blue-600">
-                      {event.date}
+              <div className="flex-1 pb-8 bg-white rounded-xl shadow-md hover:shadow-lg p-6 border border-blue-100/50 hover:border-blue-200 transition-all duration-300 transform hover:scale-105">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <Text weight="bold" className="text-blue-600 text-lg">
+                      📅 {event.date}
                     </Text>
                     {event.tag && (
-                      <Badge >
+                      <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200">
                         {event.tag}
                       </Badge>
                     )}
                   </div>
-                  <Heading level="h3" weight="semibold">
+                  <Heading level="h3" weight="semibold" className="text-slate-900">
                     {event.title}
                   </Heading>
-                  <Text className="text-muted-foreground">
+                  <Text className="text-slate-700 leading-relaxed">
                     {event.description}
                   </Text>
                 </div>

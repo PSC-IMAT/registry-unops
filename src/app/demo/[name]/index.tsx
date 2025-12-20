@@ -121,6 +121,11 @@ export const demos: { [name: string]: Demo } = {
   "onu-situation-overview": situationOverview,
   "onu-sticky-toc": stickyToc,
   "onu-timeline": timeline,
+  "damage-baseline": damageBaseline,
+  "damage-hero": damageHero,
+  "damage-bottom-nav": damageBottomNav,
+  "damage-monitoring": damageMonitoring,
+  "damage-dashboard": damageDashboard,
   // Damage Assessment blocks are available via dedicated pages (see /demo/* routes)
 
   // components

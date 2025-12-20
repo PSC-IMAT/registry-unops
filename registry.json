@@ -9,7 +9,11 @@
       "title": "Hero Block",
       "description": "Hero landing section with title, subtitle, media (image/video), KPI cards, and CTAs",
       "files": [
-        { "path": "src/registry/onu/blocks/hero.tsx", "type": "registry:block" }
+        {
+          "path": "src/registry/onu/blocks/hero.tsx",
+          "type": "registry:block",
+          "target": "blocks/hero.tsx"
+        }
       ]
     },
     {
@@ -20,7 +24,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/situation-overview.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/situation-overview.tsx"
         }
       ]
     },
@@ -32,7 +37,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/key-findings.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/key-findings.tsx"
         }
       ]
     },
@@ -44,7 +50,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/impact-stats.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/impact-stats.tsx"
         }
       ]
     },
@@ -56,7 +63,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/methodology.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/methodology.tsx"
         }
       ]
     },
@@ -68,7 +76,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/recommendations.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/recommendations.tsx"
         }
       ]
     },
@@ -80,7 +89,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/data-sources-disclaimer.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/data-sources-disclaimer.tsx"
         }
       ]
     },
@@ -92,7 +102,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/footer-onu.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/footer-onu.tsx"
         }
       ]
     },
@@ -104,7 +115,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/map-block.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/map-block.tsx"
         }
       ]
     },
@@ -116,7 +128,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/chart-narrative.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/chart-narrative.tsx"
         }
       ]
     },
@@ -128,7 +141,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/before-after-compare.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/before-after-compare.tsx"
         }
       ]
     },
@@ -140,7 +154,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/timeline.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/timeline.tsx"
         }
       ]
     },
@@ -152,7 +167,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/region-breakdown.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/region-breakdown.tsx"
         }
       ]
     },
@@ -164,7 +180,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/sticky-toc.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/sticky-toc.tsx"
         }
       ]
     },
@@ -176,7 +193,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/section-tabs.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/section-tabs.tsx"
         }
       ]
     },
@@ -186,7 +204,11 @@
       "title": "FAQ",
       "description": "FAQ accordion with expandable Q&A items",
       "files": [
-        { "path": "src/registry/onu/blocks/faq.tsx", "type": "registry:block" }
+        {
+          "path": "src/registry/onu/blocks/faq.tsx",
+          "type": "registry:block",
+          "target": "blocks/faq.tsx"
+        }
       ]
     },
     {
@@ -197,7 +219,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/download-center.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/download-center.tsx"
         }
       ]
     },
@@ -209,7 +232,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/callout-alert.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/callout-alert.tsx"
         }
       ]
     },
@@ -221,7 +245,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/credits.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/credits.tsx"
         }
       ]
     },
@@ -233,7 +258,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/damage-hero.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/damage-hero.tsx"
         }
       ]
     },
@@ -245,7 +271,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/bottom-nav.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/bottom-nav.tsx"
         }
       ]
     },
@@ -257,7 +284,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/baseline.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/baseline.tsx"
         }
       ]
     },
@@ -269,7 +297,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/monitoring.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/monitoring.tsx"
         }
       ]
     },
@@ -281,7 +310,8 @@
       "files": [
         {
           "path": "src/registry/onu/blocks/damage-dashboard.tsx",
-          "type": "registry:block"
+          "type": "registry:block",
+          "target": "blocks/damage-dashboard.tsx"
         }
       ]
     },
@@ -291,7 +321,11 @@
       "title": "Accordion",
       "description": "Accordion with collapsible items and controlled state",
       "files": [
-        { "path": "src/registry/onu/ui/accordion.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/accordion.tsx"
+        }
       ]
     },
     {
@@ -302,7 +336,8 @@
       "files": [
         {
           "path": "src/registry/onu/ui/alert-dialog.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/ui/alert-dialog.tsx"
         }
       ]
     },
@@ -312,7 +347,11 @@
       "title": "Alert",
       "description": "Inline status banner with icon, title, and description",
       "files": [
-        { "path": "src/registry/onu/ui/alert.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert.tsx"
+        }
       ]
     },
     {
@@ -323,7 +362,8 @@
       "files": [
         {
           "path": "src/registry/onu/ui/aspect-ratio.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/ui/aspect-ratio.tsx"
         }
       ]
     },
@@ -333,7 +373,11 @@
       "title": "Avatar",
       "description": "User avatar with fallback initials and status",
       "files": [
-        { "path": "src/registry/onu/ui/avatar.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx"
+        }
       ]
     },
     {
@@ -342,7 +386,11 @@
       "title": "Badge",
       "description": "Small pill badge with variants for status chips",
       "files": [
-        { "path": "src/registry/onu/ui/badge.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/badge.tsx"
+        }
       ]
     },
     {
@@ -351,7 +399,11 @@
       "title": "Breadcrumb",
       "description": "Hierarchical breadcrumb navigation trail",
       "files": [
-        { "path": "src/registry/onu/ui/breadcrumb.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/breadcrumb.tsx"
+        }
       ]
     },
     {
@@ -362,7 +414,8 @@
       "files": [
         {
           "path": "src/registry/onu/ui/button-group.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/ui/button-group.tsx"
         }
       ]
     },
@@ -372,7 +425,11 @@
       "title": "Button",
       "description": "Primary button component with variants and sizes",
       "files": [
-        { "path": "src/registry/onu/ui/button.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx"
+        }
       ]
     },
     {
@@ -381,7 +438,11 @@
       "title": "Calendar",
       "description": "Date picker calendar built on radix primitives",
       "files": [
-        { "path": "src/registry/onu/ui/calendar.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/calendar.tsx"
+        }
       ]
     },
     {
@@ -390,7 +451,11 @@
       "title": "Card",
       "description": "Card container with header, content, and footer slots",
       "files": [
-        { "path": "src/registry/onu/ui/card.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
       ]
     },
     {
@@ -399,7 +464,11 @@
       "title": "Carousel",
       "description": "Embla-based carousel for sliding content",
       "files": [
-        { "path": "src/registry/onu/ui/carousel.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/carousel.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/carousel.tsx"
+        }
       ]
     },
     {
@@ -408,7 +477,11 @@
       "title": "Chart",
       "description": "Recharts wrapper for responsive charts",
       "files": [
-        { "path": "src/registry/onu/ui/chart.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/chart.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/chart.tsx"
+        }
       ]
     },
     {
@@ -417,7 +490,11 @@
       "title": "Checkbox",
       "description": "Checkbox input with indeterminate support",
       "files": [
-        { "path": "src/registry/onu/ui/checkbox.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
       ]
     },
     {
@@ -426,7 +503,11 @@
       "title": "Code",
       "description": "Inline and block code styling with copy support",
       "files": [
-        { "path": "src/registry/onu/ui/code.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/code.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/code.tsx"
+        }
       ]
     },
     {
@@ -435,7 +516,11 @@
       "title": "Collapsible",
       "description": "Toggleable collapsible content region",
       "files": [
-        { "path": "src/registry/onu/ui/collapsible.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/collapsible.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/collapsible.tsx"
+        }
       ]
     },
     {
@@ -444,7 +529,11 @@
       "title": "Command",
       "description": "Command palette component with search and groups",
       "files": [
-        { "path": "src/registry/onu/ui/command.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/command.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/command.tsx"
+        }
       ]
     },
     {
@@ -455,7 +544,8 @@
       "files": [
         {
           "path": "src/registry/onu/ui/context-menu.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/ui/context-menu.tsx"
         }
       ]
     },
@@ -465,7 +555,11 @@
       "title": "Dialog",
       "description": "Modal dialog with overlay, title, and actions",
       "files": [
-        { "path": "src/registry/onu/ui/dialog.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
       ]
     },
     {
@@ -474,7 +568,11 @@
       "title": "Divider",
       "description": "Horizontal rule separator with label support",
       "files": [
-        { "path": "src/registry/onu/ui/divider.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/divider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/divider.tsx"
+        }
       ]
     },
     {
@@ -483,7 +581,11 @@
       "title": "Drawer",
       "description": "Slide-in drawer panel from any edge",
       "files": [
-        { "path": "src/registry/onu/ui/drawer.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/drawer.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/drawer.tsx"
+        }
       ]
     },
     {
@@ -494,7 +596,8 @@
       "files": [
         {
           "path": "src/registry/onu/ui/dropdown-menu.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/ui/dropdown-menu.tsx"
         }
       ]
     },
@@ -504,7 +607,11 @@
       "title": "Empty State",
       "description": "Empty state illustration with message and action",
       "files": [
-        { "path": "src/registry/onu/ui/empty.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/empty.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/empty.tsx"
+        }
       ]
     },
     {
@@ -513,7 +620,11 @@
       "title": "Field",
       "description": "Form field wrapper with label, hint, and error",
       "files": [
-        { "path": "src/registry/onu/ui/field.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/field.tsx"
+        }
       ]
     },
     {
@@ -522,7 +633,11 @@
       "title": "Form",
       "description": "React Hook Form + Zod wiring helpers",
       "files": [
-        { "path": "src/registry/onu/ui/form.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/form.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/form.tsx"
+        }
       ]
     },
     {
@@ -531,7 +646,11 @@
       "title": "Heading",
       "description": "Typographic heading styles with levels",
       "files": [
-        { "path": "src/registry/onu/ui/heading.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/heading.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/heading.tsx"
+        }
       ]
     },
     {
@@ -540,7 +659,11 @@
       "title": "Hover Card",
       "description": "Hover-triggered card for previews and metadata",
       "files": [
-        { "path": "src/registry/onu/ui/hover-card.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/hover-card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/hover-card.tsx"
+        }
       ]
     },
     {
@@ -549,7 +672,11 @@
       "title": "Image",
       "description": "Responsive image with ratio, caption, and fallback",
       "files": [
-        { "path": "src/registry/onu/ui/image.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/image.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/image.tsx"
+        }
       ]
     },
     {
@@ -558,7 +685,11 @@
       "title": "Input Group",
       "description": "Input with leading/trailing slots and adornments",
       "files": [
-        { "path": "src/registry/onu/ui/input-group.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/input-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-group.tsx"
+        }
       ]
     },
     {
@@ -567,7 +698,11 @@
       "title": "Input OTP",
       "description": "One-time-passcode segmented input",
       "files": [
-        { "path": "src/registry/onu/ui/input-otp.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/input-otp.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-otp.tsx"
+        }
       ]
     },
     {
@@ -576,7 +711,11 @@
       "title": "Input",
       "description": "Text input with focus ring and disabled states",
       "files": [
-        { "path": "src/registry/onu/ui/input.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
       ]
     },
     {
@@ -585,7 +724,11 @@
       "title": "Item",
       "description": "Generic item wrapper for lists and menus",
       "files": [
-        { "path": "src/registry/onu/ui/item.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/item.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/item.tsx"
+        }
       ]
     },
     {
@@ -594,7 +737,11 @@
       "title": "Kbd",
       "description": "Keyboard key hint badge",
       "files": [
-        { "path": "src/registry/onu/ui/kbd.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/kbd.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/kbd.tsx"
+        }
       ]
     },
     {
@@ -603,7 +750,11 @@
       "title": "Label",
       "description": "Accessible form label tied to inputs",
       "files": [
-        { "path": "src/registry/onu/ui/label.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/label.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx"
+        }
       ]
     },
     {
@@ -612,7 +763,11 @@
       "title": "Link",
       "description": "Styled anchor with external icon handling",
       "files": [
-        { "path": "src/registry/onu/ui/link.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/link.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/link.tsx"
+        }
       ]
     },
     {
@@ -621,7 +776,11 @@
       "title": "List",
       "description": "Ordered and unordered lists with spacing and markers",
       "files": [
-        { "path": "src/registry/onu/ui/list.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/list.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/list.tsx"
+        }
       ]
     },
     {
@@ -630,7 +789,11 @@
       "title": "Menubar",
       "description": "Top menu bar with dropdown menus",
       "files": [
-        { "path": "src/registry/onu/ui/menubar.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/menubar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/menubar.tsx"
+        }
       ]
     },
     {
@@ -641,7 +804,8 @@
       "files": [
         {
           "path": "src/registry/onu/ui/navigation-menu.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/ui/navigation-menu.tsx"
         }
       ]
     },
@@ -651,7 +815,11 @@
       "title": "Pagination",
       "description": "Pagination controls with page buttons and shortcuts",
       "files": [
-        { "path": "src/registry/onu/ui/pagination.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/pagination.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pagination.tsx"
+        }
       ]
     },
     {
@@ -660,7 +828,11 @@
       "title": "Popover",
       "description": "Positioned popover for contextual content",
       "files": [
-        { "path": "src/registry/onu/ui/popover.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
       ]
     },
     {
@@ -669,7 +841,11 @@
       "title": "Progress",
       "description": "Determinate progress bar",
       "files": [
-        { "path": "src/registry/onu/ui/progress.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/progress.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress.tsx"
+        }
       ]
     },
     {
@@ -678,7 +854,11 @@
       "title": "Radio Group",
       "description": "Grouped radio inputs with keyboard support",
       "files": [
-        { "path": "src/registry/onu/ui/radio-group.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/radio-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/radio-group.tsx"
+        }
       ]
     },
     {
@@ -687,7 +867,11 @@
       "title": "Resizable",
       "description": "Resizable panels with draggable handles",
       "files": [
-        { "path": "src/registry/onu/ui/resizable.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/resizable.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/resizable.tsx"
+        }
       ]
     },
     {
@@ -696,7 +880,11 @@
       "title": "Scroll Area",
       "description": "Custom scroll area with styled scrollbar",
       "files": [
-        { "path": "src/registry/onu/ui/scroll-area.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/scroll-area.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/scroll-area.tsx"
+        }
       ]
     },
     {
@@ -705,7 +893,11 @@
       "title": "Section",
       "description": "Layout section with max-width and spacing helpers",
       "files": [
-        { "path": "src/registry/onu/ui/section.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/section.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/section.tsx"
+        }
       ]
     },
     {
@@ -714,7 +906,11 @@
       "title": "Select",
       "description": "Select dropdown with search and keyboard nav",
       "files": [
-        { "path": "src/registry/onu/ui/select.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx"
+        }
       ]
     },
     {
@@ -723,7 +919,11 @@
       "title": "Separator",
       "description": "Thin separator for grouping content",
       "files": [
-        { "path": "src/registry/onu/ui/separator.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
       ]
     },
     {
@@ -732,7 +932,11 @@
       "title": "Sheet",
       "description": "Overlay sheet component with header and actions",
       "files": [
-        { "path": "src/registry/onu/ui/sheet.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/sheet.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sheet.tsx"
+        }
       ]
     },
     {
@@ -741,7 +945,11 @@
       "title": "Sidebar",
       "description": "Application sidebar layout with collapsible sections",
       "files": [
-        { "path": "src/registry/onu/ui/sidebar.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/sidebar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sidebar.tsx"
+        }
       ]
     },
     {
@@ -750,7 +958,11 @@
       "title": "Skeleton",
       "description": "Loading skeleton placeholders",
       "files": [
-        { "path": "src/registry/onu/ui/skeleton.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/skeleton.tsx"
+        }
       ]
     },
     {
@@ -759,7 +971,11 @@
       "title": "Slider",
       "description": "Range slider with single or multiple thumbs",
       "files": [
-        { "path": "src/registry/onu/ui/slider.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
       ]
     },
     {
@@ -768,7 +984,11 @@
       "title": "Sonner",
       "description": "Toast notifications powered by sonner",
       "files": [
-        { "path": "src/registry/onu/ui/sonner.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/sonner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sonner.tsx"
+        }
       ]
     },
     {
@@ -777,7 +997,11 @@
       "title": "Spinner",
       "description": "Loading spinner indicator",
       "files": [
-        { "path": "src/registry/onu/ui/spinner.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/spinner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/spinner.tsx"
+        }
       ]
     },
     {
@@ -786,7 +1010,11 @@
       "title": "Switch",
       "description": "Toggle switch with accessibility support",
       "files": [
-        { "path": "src/registry/onu/ui/switch.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
       ]
     },
     {
@@ -795,7 +1023,11 @@
       "title": "Table",
       "description": "Responsive table with variants and density options",
       "files": [
-        { "path": "src/registry/onu/ui/table.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/table.tsx"
+        }
       ]
     },
     {
@@ -804,7 +1036,11 @@
       "title": "Tabs",
       "description": "Tabs with keyboard navigation and variants",
       "files": [
-        { "path": "src/registry/onu/ui/tabs.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
       ]
     },
     {
@@ -813,7 +1049,11 @@
       "title": "Text",
       "description": "Text component with semantic sizes and weights",
       "files": [
-        { "path": "src/registry/onu/ui/text.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/text.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/text.tsx"
+        }
       ]
     },
     {
@@ -822,7 +1062,11 @@
       "title": "Textarea",
       "description": "Multi-line text input with autosize styling",
       "files": [
-        { "path": "src/registry/onu/ui/textarea.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx"
+        }
       ]
     },
     {
@@ -833,7 +1077,8 @@
       "files": [
         {
           "path": "src/registry/onu/ui/toggle-group.tsx",
-          "type": "registry:ui"
+          "type": "registry:ui",
+          "target": "components/ui/toggle-group.tsx"
         }
       ]
     },
@@ -843,7 +1088,11 @@
       "title": "Toggle",
       "description": "Pressable toggle button with variants",
       "files": [
-        { "path": "src/registry/onu/ui/toggle.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle.tsx"
+        }
       ]
     },
     {
@@ -852,7 +1101,11 @@
       "title": "Tooltip",
       "description": "Tooltip with delay and arrow support",
       "files": [
-        { "path": "src/registry/onu/ui/tooltip.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
       ]
     },
     {
@@ -861,7 +1114,11 @@
       "title": "Video",
       "description": "Video player wrapper with poster and controls",
       "files": [
-        { "path": "src/registry/onu/ui/video.tsx", "type": "registry:ui" }
+        {
+          "path": "src/registry/onu/ui/video.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/video.tsx"
+        }
       ]
     },
     {
@@ -872,7 +1129,8 @@
       "files": [
         {
           "path": "src/registry/onu/components/hero.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/hero.tsx"
         }
       ]
     },
@@ -961,7 +1219,9 @@
           "primary-ring": "oklch(0.746 0.16 232.661)"
         }
       },
-      "dependencies": ["radix-ui"],
+      "dependencies": [
+        "radix-ui"
+      ],
       "files": [
         {
           "path": "src/styles/globals.css",
@@ -975,7 +1235,6 @@
         }
       ]
     },
-
     {
       "name": "onu-shared",
       "type": "registry:lib",

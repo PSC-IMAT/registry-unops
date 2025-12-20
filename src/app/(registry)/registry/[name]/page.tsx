@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ComponentCard } from "@/components/registry/component-card";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { getRegistryItem, getRegistryItems } from "@/lib/registry";
 
 export async function generateStaticParams() {

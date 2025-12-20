@@ -16,14 +16,3 @@ export const BottomNavBlock: React.FC<BottomNavBlockProps> = ({ items, offset = 
   const activeId = useScrollSpy(items.map((i) => i.id));
   return <BottomNav items={items} activeId={activeId} offset={offset} />;
 };
-
-export const bottomNavExamples: BottomNavBlockProps[] = [
-  {
-    items: [
-      { id: "baseline", label: "Establishing the baseline" },
-      { id: "monitoring", label: "Monitoring the situation" },
-      { id: "damage", label: "Assessing the damage" },
-    ],
-    offset: 80,
-  },
-];

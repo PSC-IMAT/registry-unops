@@ -5,7 +5,7 @@ import Link from "next/link";
 import type React from "react";
 
 import { FontBlock } from "./font-block";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import { ColorBlock } from "./color-block";
 
 export default function TokensPage() {

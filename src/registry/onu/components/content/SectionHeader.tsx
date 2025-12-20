@@ -1,6 +1,6 @@
 import React from "react";
-import { Heading } from "@/ui/heading";
-import { Text } from "@/registry/onu/ui/text";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 import { cn } from "@/lib/utils";
 
 export interface SectionHeaderProps {

@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/ui/card";
+} from "@/components/ui/card";
 import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
 const uiItems = getUIPrimitives().slice(0, 5);

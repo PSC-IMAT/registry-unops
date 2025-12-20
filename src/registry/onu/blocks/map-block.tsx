@@ -8,11 +8,11 @@
 
 import React, { useState } from 'react';
 import { z } from 'zod';
-import { Section } from '@/ui/section';
-import { Heading } from '@/ui/heading';
-import { Text } from '@/registry/onu/ui/text';
-import { Card } from '@/ui/card';
-import { Badge } from '@/ui/badge';
+import { Section } from '@/components/ui/section';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 const LegendItemSchema = z.object({
@@ -47,33 +47,40 @@ export const MapBlock: React.FC<MapBlockProps> = ({
   const [selectedFeature, setSelectedFeature] = useState<string | null>(null);
 
   return (
-    <Section spacing="lg" className={className}>
-      <div className="space-y-4">
+    <Section
+      spacing="lg"
+      className={cn('relative overflow-hidden bg-linear-to-br from-slate-50 via-white to-blue-50/30', className)}
+    >
+      {/* Decorative blobs */}
+      <div className="pointer-events-none absolute -top-40 -right-40 h-80 w-80 rounded-full bg-blue-300 opacity-10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-cyan-300 opacity-10 blur-3xl" />
+
+      <div className="relative z-10 space-y-6">
         <div className="space-y-2">
-          <Heading level="h2" weight="bold">
+          <Heading level="h2" weight="bold" className="text-3xl text-slate-900">
             {title}
           </Heading>
           {subtitle && (
-            <Text className="text-muted-foreground">
+            <Text className="text-slate-600">
               {subtitle}
             </Text>
           )}
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-4">
+        <div className="grid gap-6 lg:grid-cols-4">
           {/* Filters */}
           {filters && filters.length > 0 && (
             <div className="space-y-4">
-              <Heading level="h3" weight="semibold">
+              <Heading level="h3" weight="semibold" className="text-slate-900">
                 Filters
               </Heading>
               {filters.map((filter, index) => (
-                <Card key={index} >
-                  <div className="space-y-2">
-                    <Text weight="semibold">
+                <Card key={index} className="rounded-xl border border-slate-200/60 bg-white shadow-sm">
+                  <div className="space-y-2 p-4">
+                    <Text weight="semibold" className="text-slate-900">
                       {filter.label}
                     </Text>
-                    <select className="w-full text-sm border rounded p-1">
+                    <select className="w-full rounded border border-slate-200 bg-white p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                       <option>All</option>
                       {filter.options.map((opt, i) => (
                         <option key={i}>{opt}</option>
@@ -87,18 +94,18 @@ export const MapBlock: React.FC<MapBlockProps> = ({
 
           {/* Map Container */}
           <div className="lg:col-span-3 space-y-4">
-            <div className="relative border rounded-lg" style={{ height }}>
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded">
-                <div className="text-center space-y-2">
-                  <Text className="text-muted-foreground">
+            <div className="relative overflow-hidden rounded-xl border border-blue-100/60 bg-linear-to-br from-blue-50 to-cyan-50/40 shadow-md" style={{ height }}>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="space-y-3 text-center">
+                  <Text className="text-slate-600">
                     🗺️ Map Placeholder
                   </Text>
-                  <Text className="text-muted-foreground">
+                  <Text className="text-slate-600">
                     Integrate Mapbox, Leaflet, or other mapping library here
                   </Text>
                   <button
                     onClick={() => setSelectedFeature('Sample Location')}
-                    className="mt-4 px-4 py-2 bg-blue-600 text-white rounded text-sm"
+                    className="mt-4 rounded-md bg-blue-600 px-4 py-2 text-sm text-white shadow hover:bg-blue-700"
                   >
                     Click to Select Feature
                   </button>
@@ -108,15 +115,15 @@ export const MapBlock: React.FC<MapBlockProps> = ({
 
             {/* Legend */}
             {legend && legend.length > 0 && (
-              <Card >
-                <div className="flex flex-wrap gap-4">
+              <Card className="rounded-xl border border-slate-200/60 bg-white shadow-sm">
+                <div className="flex flex-wrap gap-4 p-4">
                   {legend.map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <div
                         className="w-4 h-4 rounded"
                         style={{ backgroundColor: item.color }}
                       />
-                      <Text >{item.label}</Text>
+                      <Text className="text-slate-700">{item.label}</Text>
                     </div>
                   ))}
                 </div>
@@ -125,12 +132,12 @@ export const MapBlock: React.FC<MapBlockProps> = ({
 
             {/* Selected Feature Panel */}
             {selectedFeature && (
-              <Card >
-                <div className="space-y-2">
-                  <Heading level="h3" weight="semibold">
+              <Card className="rounded-xl border border-emerald-200/60 bg-linear-to-br from-emerald-50 to-green-50/40 shadow-sm">
+                <div className="space-y-2 p-4">
+                  <Heading level="h3" weight="semibold" className="text-slate-900">
                     Selected: {selectedFeature}
                   </Heading>
-                  <Text >
+                  <Text className="text-slate-700">
                     Feature details, statistics, and metadata would appear here.
                   </Text>
                   <button

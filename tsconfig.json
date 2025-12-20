@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,8 +20,17 @@
       "@/*": [
         "./src/*"
       ],
-      "@/ui/*": [
-        "./src/registry/onu/ui/*"
+      "@/components/ui/*": [
+        "./src/components/ui/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/blocks/*": [
+        "./src/blocks/*"
+      ],
+      "@/onu/*": [
+        "./src/registry/onu/*"
       ],
       "@/demo/*": [
         "./src/app/demo/[name]/*"

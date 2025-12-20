@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "@/ui/card";
+import { Card } from "@/components/ui/card";
 import { StoryStep, type StoryStepProps } from "./StoryStep";
 
 export interface ScrollStoryProps {

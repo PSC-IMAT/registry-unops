@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { AspectRatio } from "@/registry/onu/ui/aspect-ratio";
-import { Card } from "@/ui/card";
-import { Text } from "@/registry/onu/ui/text";
-import { Spinner } from "@/registry/onu/ui/spinner";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Card } from "@/components/ui/card";
+import { Text } from "@/components/ui/text";
+import { Spinner } from "@/components/ui/spinner";
 import { cn } from "@/lib/utils";
 
 export interface ResponsiveIframeProps {

@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { Toaster } from "@/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function ErrorPage({
   error,

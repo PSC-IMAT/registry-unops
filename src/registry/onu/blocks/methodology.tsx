@@ -6,11 +6,11 @@
 
 import React from 'react';
 import { z } from 'zod';
-import { Section } from '@/ui/section';
-import { Heading } from '@/ui/heading';
-import { Text } from '@/registry/onu/ui/text';
-import { Card } from '@/ui/card';
-import { List } from '@/ui/list';
+import { Section } from '@/components/ui/section';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
+import { Card } from '@/components/ui/card';
+import { List } from '@/components/ui/list';
 import { cn } from '@/lib/utils';
 
 const StepSchema = z.object({
@@ -38,34 +38,41 @@ export const MethodologyBlock: React.FC<MethodologyBlockProps> = ({
   className,
 }) => {
   return (
-    <Section spacing="lg" className={className}>
-      <div className="space-y-8">
-        <Heading level="h2" weight="bold">
+    <Section spacing="lg" className={cn('bg-linear-to-br from-blue-50 via-slate-50 to-cyan-50/30 relative overflow-hidden', className)}>
+      {/* Decorative elements */}
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-300 rounded-full blur-3xl opacity-10" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-300 rounded-full blur-3xl opacity-10" />
+      
+      <div className="relative z-10 space-y-8">
+        <Heading level="h2" weight="bold" className="text-3xl text-slate-900">
           {title}
         </Heading>
 
         {/* Steps Pipeline */}
-        <div className="space-y-6">
-          <Heading level="h3" weight="semibold">
-            Research Steps
-          </Heading>
+        <div className="space-y-8">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="text-2xl">🔬</div>
+            <Heading level="h3" weight="semibold" className="text-slate-900">
+              Research Steps
+            </Heading>
+          </div>
           <div className="relative space-y-6">
             {steps.map((step, index) => (
-              <div key={index} className="flex gap-4">
+              <div key={index} className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-bold">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-linear-to-br from-blue-600 to-blue-700 text-white font-bold shadow-lg">
                     {index + 1}
                   </div>
                   {index < steps.length - 1 && (
-                    <div className="w-0.5 flex-1 bg-blue-300 mt-2 min-h-12" />
+                    <div className="w-1 flex-1 bg-linear-to-b from-blue-400 to-blue-200 mt-2 min-h-16" />
                   )}
                 </div>
-                <Card className="flex-1">
-                  <div className="space-y-2">
-                    <Heading level="h4" weight="semibold">
+                <Card className="flex-1 rounded-xl shadow-md hover:shadow-lg bg-white border border-blue-100/50 hover:border-blue-200 transition-all duration-300 transform hover:scale-105 overflow-hidden">
+                  <div className="space-y-3 p-5">
+                    <Heading level="h4" weight="semibold" className="text-blue-600">
                       {step.title}
                     </Heading>
-                    <Text className="text-muted-foreground">
+                    <Text className="text-slate-700 leading-relaxed">
                       {step.description}
                     </Text>
                   </div>
@@ -77,14 +84,14 @@ export const MethodologyBlock: React.FC<MethodologyBlockProps> = ({
 
         {/* Limitations */}
         {limitations && limitations.length > 0 && (
-          <Card >
-            <div className="space-y-3">
-              <Heading level="h3" weight="semibold" className="text-yellow-700">
-                Limitations
+          <Card className="rounded-xl shadow-md hover:shadow-lg bg-linear-to-br from-yellow-50 to-orange-50/30 border border-yellow-100/50 hover:border-yellow-200 transition-all duration-300 overflow-hidden">
+            <div className="space-y-3 p-6">
+              <Heading level="h3" weight="semibold" className="text-orange-700 flex items-center gap-2">
+                ⚠️ Limitations
               </Heading>
-              <List variant="unordered">
+              <List variant="unordered" className="text-slate-700">
                 {limitations.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index} className="text-sm leading-relaxed">{item}</li>
                 ))}
               </List>
             </div>
@@ -93,26 +100,26 @@ export const MethodologyBlock: React.FC<MethodologyBlockProps> = ({
 
         {/* Interpretation Notes */}
         {interpretation && (
-          <Card >
-            <div className="space-y-3">
-              <Heading level="h3" weight="semibold">
-                Interpretation Notes
+          <Card className="rounded-xl shadow-md hover:shadow-lg bg-linear-to-br from-blue-50 to-cyan-50/30 border border-blue-100/50 hover:border-blue-200 transition-all duration-300 overflow-hidden">
+            <div className="space-y-3 p-6">
+              <Heading level="h3" weight="semibold" className="text-slate-900 flex items-center gap-2">
+                💭 Interpretation Notes
               </Heading>
-              <Text >{interpretation}</Text>
+              <Text className="text-slate-700 leading-relaxed">{interpretation}</Text>
             </div>
           </Card>
         )}
 
         {/* Data Sources */}
         {dataSources && dataSources.length > 0 && (
-          <Card >
-            <div className="space-y-3">
-              <Heading level="h3" weight="semibold">
-                Data Sources
+          <Card className="rounded-xl shadow-md hover:shadow-lg bg-linear-to-br from-green-50 to-emerald-50/30 border border-green-100/50 hover:border-green-200 transition-all duration-300 overflow-hidden">
+            <div className="space-y-3 p-6">
+              <Heading level="h3" weight="semibold" className="text-emerald-700 flex items-center gap-2">
+                📊 Data Sources
               </Heading>
-              <List variant="unordered">
+              <List variant="unordered" className="text-slate-700">
                 {dataSources.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index} className="text-sm leading-relaxed">{item}</li>
                 ))}
               </List>
             </div>

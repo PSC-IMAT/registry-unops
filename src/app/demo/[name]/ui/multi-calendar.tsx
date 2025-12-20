@@ -3,7 +3,7 @@
 import * as React from "react";
 import type { DateRange } from "react-day-picker";
 
-import { Calendar } from "@/ui/calendar";
+import { Calendar } from "@/components/ui/calendar";
 
 export function MultiCalendar() {
   const [dateRange, setDateRange] = React.useState<DateRange | undefined>({

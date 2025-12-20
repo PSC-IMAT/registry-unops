@@ -1,7 +1,7 @@
 import React from "react";
-import { Card } from "@/ui/card";
-import { Spinner } from "@/registry/onu/ui/spinner";
-import { Text } from "@/registry/onu/ui/text";
+import { Card } from "@/components/ui/card";
+import { Spinner } from "@/components/ui/spinner";
+import { Text } from "@/components/ui/text";
 
 export function LoadingState({ label = "Loading..." }: { label?: string }) {
   return (

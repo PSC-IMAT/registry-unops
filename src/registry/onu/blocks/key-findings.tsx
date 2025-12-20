@@ -6,11 +6,11 @@
 
 import React from 'react';
 import { z } from 'zod';
-import { Section } from '@/ui/section';
-import { Heading } from '@/ui/heading';
-import { Text } from '@/registry/onu/ui/text';
-import { Card } from '@/ui/card';
-import { Badge } from '@/ui/badge';
+import { Section } from '@/components/ui/section';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 const FindingSchema = z.object({
@@ -42,33 +42,45 @@ export const KeyFindingsBlock: React.FC<KeyFindingsBlockProps> = ({
   className,
 }) => {
   return (
-    <Section spacing="lg" className={className}>
-      <div className="space-y-6">
-        <div className="space-y-2">
-          <Heading level="h2" weight="bold">
+    <Section spacing="lg" className={cn('bg-linear-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden', className)}>
+      {/* Decorative elements */}
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-full blur-3xl opacity-10" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-10" />
+      
+      <div className="relative z-10 space-y-8">
+        <div className="space-y-3">
+          <Heading level="h2" weight="bold" className="text-3xl text-slate-900">
             {title}
           </Heading>
           {subtitle && (
-            <Text className="text-muted-foreground">
+            <Text className="text-slate-600 text-lg">
               {subtitle}
             </Text>
           )}
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {findings.map((finding, index) => (
-            <Card key={index} className="h-full">
-              <div className="flex flex-col h-full space-y-3">
+            <Card 
+              key={index} 
+              className="h-full rounded-xl shadow-md hover:shadow-lg bg-white border border-slate-200/50 hover:border-blue-200 transition-all duration-300 transform hover:scale-105 overflow-hidden hover:-translate-y-1"
+            >
+              <div className="flex flex-col h-full space-y-4 p-5">
                 <div className="flex items-start justify-between gap-2">
-                  <Text >{finding.icon}</Text>
-                  <Badge variant={finding.confidence === 'high' ? 'default' : finding.confidence === 'medium' ? 'secondary' : 'outline'} >
-                    {finding.confidence}
+                  <Text className="text-3xl">{finding.icon}</Text>
+                  <Badge 
+                    variant={finding.confidence === 'high' ? 'default' : finding.confidence === 'medium' ? 'secondary' : 'outline'}
+                    className="ml-auto text-xs font-semibold"
+                  >
+                    {finding.confidence === 'high' && '★★★'}
+                    {finding.confidence === 'medium' && '★★'}
+                    {finding.confidence === 'low' && '★'}
                   </Badge>
                 </div>
-                <Badge className="self-start">
+                <Badge className="self-start bg-blue-100 text-blue-700 hover:bg-blue-200">
                   {finding.tag}
                 </Badge>
-                <Text className="flex-1">
+                <Text className="flex-1 text-slate-700 leading-relaxed">
                   {finding.finding}
                 </Text>
               </div>

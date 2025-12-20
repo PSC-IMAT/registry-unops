@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { z } from "zod";
-import { Section } from "@/ui/section";
+import { Section } from "@/components/ui/section";
 import { SectionHeader } from "@/registry/onu/components/content/SectionHeader";
 import { ResponsiveIframe } from "@/registry/onu/components/media/ResponsiveIframe";
 import { EmbedToolbar } from "@/registry/onu/components/media/EmbedToolbar";
@@ -22,19 +22,31 @@ export const DamageDashboardBlock: React.FC<DamageDashboardBlockProps> = ({ head
 
   return (
     <Section spacing="lg">
-      <div className="space-y-4">
+      <div className="space-y-6">
         <SectionHeader {...header} />
-        <EmbedToolbar url={url} onReload={() => setUrl((u) => `${u}`)} />
+        
+        <div className="bg-linear-to-br from-slate-50 to-red-50/20 rounded-xl border border-slate-200/50 p-6 shadow-md">
+          <EmbedToolbar url={url} onReload={() => setUrl((u) => `${u}`)} />
 
-        {simulateError ? (
-          <ErrorState message="Failed to load dashboard" />
-        ) : (
-          <ResponsiveIframe src={url} title="Damage Dashboard" />
-        )}
+          <div className="mt-4">
+            {simulateError ? (
+              <div className="rounded-lg border-2 border-red-200 bg-red-50 p-8">
+                <ErrorState message="Failed to load dashboard" />
+              </div>
+            ) : (
+              <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+                <ResponsiveIframe src={url} title="Damage Dashboard" />
+              </div>
+            )}
+          </div>
+        </div>
 
         <div>
-          <button className="text-sm text-blue-600 hover:underline" onClick={() => setSimulateError((v) => !v)}>
-            Toggle error simulation
+          <button 
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-slate-100"
+            onClick={() => setSimulateError((v) => !v)}
+          >
+            {simulateError ? "✓" : "○"} Toggle error simulation
           </button>
         </div>
       </div>

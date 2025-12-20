@@ -3,20 +3,20 @@
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/ui/card";
+} from "@/components/ui/card";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/ui/tooltip";
+} from "@/components/ui/tooltip";
 import type { Component } from "@/lib/registry";
 
 interface ComponentCardProps {

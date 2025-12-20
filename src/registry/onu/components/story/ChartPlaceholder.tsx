@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@/registry/onu/ui/text";
+import { Text } from "@/components/ui/text";
 
 export function ChartPlaceholder({ label = "Chart" }: { label?: string }) {
   return (

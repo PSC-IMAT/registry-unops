@@ -5,10 +5,10 @@
 
 import React from 'react';
 import { z } from 'zod';
-import { Section } from '@/ui/section';
-import { Heading } from '@/ui/heading';
-import { Text } from '@/registry/onu/ui/text';
-import { Button } from '@/ui/button';
+import { Section } from '@/components/ui/section';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const ActionSchema = z.object({
@@ -27,10 +27,10 @@ export const CalloutAlertBlockSchema = z.object({
 export type CalloutAlertBlockProps = z.infer<typeof CalloutAlertBlockSchema>;
 
 const variantStyles = {
-  info: 'bg-blue-50 border-blue-500 text-blue-900',
-  warn: 'bg-yellow-50 border-yellow-500 text-yellow-900',
-  danger: 'bg-red-50 border-red-500 text-red-900',
-  success: 'bg-green-50 border-green-500 text-green-900',
+  info: 'bg-linear-to-r from-blue-50 to-cyan-50 border-blue-300 text-blue-900',
+  warn: 'bg-linear-to-r from-yellow-50 to-orange-50 border-yellow-300 text-yellow-900',
+  danger: 'bg-linear-to-r from-red-50 to-rose-50 border-red-300 text-red-900',
+  success: 'bg-linear-to-r from-green-50 to-emerald-50 border-green-300 text-green-900',
 };
 
 const variantIcons = {
@@ -49,22 +49,31 @@ export const CalloutAlertBlock: React.FC<CalloutAlertBlockProps> = ({
 }) => {
   return (
     <Section spacing="md" className={className}>
-      <div className={cn('border-l-4 rounded-lg p-6', variantStyles[variant])}>
+      <div className={cn('border-l-4 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300', variantStyles[variant])}>
         <div className="flex gap-4">
-          <div className="text-3xl">{variantIcons[variant]}</div>
+          <div className="text-4xl shrink-0">{variantIcons[variant]}</div>
           <div className="flex-1 space-y-3">
-            <Heading level="h3" weight="bold">
+            <Heading level="h3" weight="bold" className="text-lg">
               {title}
             </Heading>
-            <Text >{message}</Text>
+            <Text className="leading-relaxed">{message}</Text>
 
             {actions && actions.length > 0 && (
-              <div className="flex gap-3 pt-2">
+              <div className="flex flex-wrap gap-3 pt-4">
                 {actions.map((action, index) => (
                   <Button
                     key={index}
-                    variant={variant === 'danger' ? 'destructive' : 'default'}
                     onClick={() => window.location.href = action.href}
+                    className={cn(
+                      'font-semibold transition-all duration-300',
+                      variant === 'danger' 
+                        ? 'bg-red-600 hover:bg-red-700 text-white' 
+                        : variant === 'warn'
+                        ? 'bg-yellow-600 hover:bg-yellow-700 text-white'
+                        : variant === 'success'
+                        ? 'bg-green-600 hover:bg-green-700 text-white'
+                        : 'bg-blue-600 hover:bg-blue-700 text-white'
+                    )}
                   >
                     {action.label}
                   </Button>

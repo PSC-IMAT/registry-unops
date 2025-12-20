@@ -15,14 +15,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { ModeToggle } from "@/components/registry/theme-toggle";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/ui/collapsible";
-import { Input } from "@/ui/input";
-import { ScrollArea } from "@/ui/scroll-area";
+} from "@/components/ui/collapsible";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Sidebar,
   SidebarContent,
@@ -35,7 +35,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/ui/sidebar";
+} from "@/components/ui/sidebar";
 import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
 import { UnopsLogo } from "@/components/unops-logo";

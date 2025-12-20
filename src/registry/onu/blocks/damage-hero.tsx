@@ -2,10 +2,10 @@
 
 import React from "react";
 import { z } from "zod";
-import { Section } from "@/ui/section";
-import { Heading } from "@/ui/heading";
-import { Text } from "@/registry/onu/ui/text";
-import { Button } from "@/ui/button";
+import { Section } from "@/components/ui/section";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export const DamageHeroSchema = z.object({
@@ -32,22 +32,54 @@ export const DamageHeroBlock: React.FC<DamageHeroProps> = ({
   return (
     <Section spacing="xl" className={cn("relative", className)}>
       <div
-        className={cn("relative overflow-hidden rounded-xl", backgroundImage && "min-h-70")}
+        className={cn(
+          "relative overflow-hidden rounded-2xl",
+          "bg-linear-to-br from-slate-900 via-slate-800 to-slate-900",
+          "border border-slate-700/50",
+          "shadow-2xl",
+          backgroundImage && "min-h-96"
+        )}
         style={backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
       >
-        {overlay && backgroundImage && (
-          <div className="absolute inset-0 bg-black/35" />
+        {/* Gradient overlay */}
+        {overlay && (
+          <div className={cn(
+            "absolute inset-0",
+            backgroundImage 
+              ? "bg-linear-to-b from-black/40 to-black/60" 
+              : "bg-linear-to-r from-slate-900 to-slate-800"
+          )} />
         )}
-        <div className={cn("relative z-10 p-8", backgroundImage ? "text-white" : "")}>
-          <div className="space-y-4">
-            <Heading level="h1" weight="bold">{title}</Heading>
+        
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="relative z-10 p-12 lg:p-16 flex flex-col justify-center h-full">
+          <div className="max-w-2xl space-y-6">
+            <Heading 
+              level="h1" 
+              weight="bold"
+              className="text-white text-4xl lg:text-5xl leading-tight"
+            >
+              {title}
+            </Heading>
             {description && (
-              <Text className={backgroundImage ? "text-white/90" : "text-muted-foreground"}>{description}</Text>
+              <Text className="text-slate-200 text-lg leading-relaxed max-w-xl">
+                {description}
+              </Text>
             )}
           </div>
           {buttonText && buttonLink && (
-            <div className="pt-6">
-              <Button onClick={() => (window.location.href = buttonLink)}>{buttonText}</Button>
+            <div className="pt-8">
+              <Button 
+                onClick={() => (window.location.href = buttonLink)}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                {buttonText}
+              </Button>
             </div>
           )}
         </div>
@@ -56,20 +88,3 @@ export const DamageHeroBlock: React.FC<DamageHeroProps> = ({
   );
 };
 
-export const damageHeroExamples: DamageHeroProps[] = [
-  {
-    title: "Damage Assessment in Conflict Environments",
-    description: "Rapid situational awareness, baseline establishment, and targeted monitoring for critical infrastructure.",
-    buttonText: "Get Started",
-    buttonLink: "#baseline",
-    overlay: true,
-  },
-  {
-    title: "Urban Hospital Impact Analysis",
-    description: "Assess damage and prioritize response actions across sectors.",
-    buttonText: "View Dashboard",
-    buttonLink: "#dashboard",
-    backgroundImage: "/images/hospital.jpg",
-    overlay: true,
-  },
-];

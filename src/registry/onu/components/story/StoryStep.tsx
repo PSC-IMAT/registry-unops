@@ -1,7 +1,7 @@
 import React from "react";
-import { Card } from "@/ui/card";
-import { Heading } from "@/ui/heading";
-import { Text } from "@/registry/onu/ui/text";
+import { Card } from "@/components/ui/card";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 
 export interface StoryStepProps {
   title: string;

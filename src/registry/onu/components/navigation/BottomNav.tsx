@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Card } from "@/ui/card";
+import { Card } from "@/components/ui/card";
 import { NavPillButton } from "./NavPillButton";
 import { useSmoothScrollTo } from "../hooks/use-smooth-scroll-to";
 

@@ -4,11 +4,11 @@
 
 import React from 'react';
 import { z } from 'zod';
-import { Section } from '@/ui/section';
-import { Heading } from '@/ui/heading';
-import { Text } from '@/registry/onu/ui/text';
-import { Link } from '@/ui/link';
-import { Image } from '@/ui/image';
+import { Section } from '@/components/ui/section';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
+import { Link } from '@/components/ui/link';
+import { Image } from '@/components/ui/image';
 import { cn } from '@/lib/utils';
 
 const PartnerSchema = z.object({
@@ -50,30 +50,28 @@ export const FooterOnuBlock: React.FC<FooterOnuBlockProps> = ({
   className,
 }) => {
   return (
-    <Section spacing="lg" className={cn('bg-blue-900 text-white border-t-4 border-blue-500', className)}>
-      <div className="space-y-8">
+    <Section
+      spacing="lg"
+      className={cn('relative overflow-hidden bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white border-t-4 border-blue-500', className)}
+    >
+      {/* Decorative gradient */}
+      <div className="pointer-events-none absolute -top-40 -right-40 h-80 w-80 rounded-full bg-blue-500 opacity-10 blur-3xl" />
+
+      <div className="relative z-10 space-y-10">
         {partners && partners.length > 0 && (
-          <div className="space-y-4">
-            <Heading level="h3" weight="semibold" className="text-white">
-              Partners
+          <div className="space-y-5 border-b border-slate-700 pb-8">
+            <Heading level="h3" weight="semibold" className="flex items-center gap-2 text-white">
+              🤝 Partners
             </Heading>
-            <div className="flex flex-wrap gap-6 items-center">
+            <div className="flex flex-wrap items-center gap-8">
               {partners.map((partner, index) => (
-                <div key={index}>
+                <div key={index} className="transition-opacity duration-300 hover:opacity-80">
                   {partner.url ? (
                     <a href={partner.url} target="_blank" rel="noopener noreferrer">
-                      <Image
-                        src={partner.logo}
-                        alt={partner.name}
-                        className="h-12 w-auto filter brightness-0 invert"
-                      />
+                      <Image src={partner.logo} alt={partner.name} className="h-12 w-auto invert" />
                     </a>
                   ) : (
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="h-12 w-auto filter brightness-0 invert"
-                    />
+                    <Image src={partner.logo} alt={partner.name} className="h-12 w-auto invert" />
                   )}
                 </div>
               ))}
@@ -83,19 +81,17 @@ export const FooterOnuBlock: React.FC<FooterOnuBlockProps> = ({
 
         <div className="grid gap-8 md:grid-cols-3">
           {contacts && contacts.length > 0 && (
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Heading level="h3" weight="semibold" className="text-white">
                 Contact
               </Heading>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {contacts.map((contact, index) => (
-                  <div key={index}>
-                    <Text className="text-blue-200">
+                  <div key={index} className="transition-transform duration-200 hover:translate-x-1">
+                    <Text className="text-blue-200 text-sm uppercase tracking-wider">
                       {contact.label}
                     </Text>
-                    <Text className="text-white">
-                      {contact.value}
-                    </Text>
+                    <Text className="font-medium text-white">{contact.value}</Text>
                   </div>
                 ))}
               </div>
@@ -103,13 +99,13 @@ export const FooterOnuBlock: React.FC<FooterOnuBlockProps> = ({
           )}
 
           {legalLinks && legalLinks.length > 0 && (
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Heading level="h3" weight="semibold" className="text-white">
                 Legal
               </Heading>
               <div className="space-y-2">
                 {legalLinks.map((link, index) => (
-                  <Link key={index} href={link.href} className="text-blue-200 hover:text-white block">
+                  <Link key={index} href={link.href} className="block text-blue-200 transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 ))}
@@ -117,12 +113,12 @@ export const FooterOnuBlock: React.FC<FooterOnuBlockProps> = ({
             </div>
           )}
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             <Heading level="h3" weight="semibold" className="text-white">
               Report Information
             </Heading>
             <div className="space-y-2">
-              <Text className="text-white">
+              <Text className="font-medium text-white">
                 {preparedBy}
               </Text>
               <Text className="text-blue-200">
@@ -138,7 +134,7 @@ export const FooterOnuBlock: React.FC<FooterOnuBlockProps> = ({
         </div>
 
         <div className="border-t border-blue-700 pt-4">
-          <Text className="text-blue-200 text-center">
+          <Text className="text-center text-blue-200">
             © {new Date().getFullYear()} United Nations Office for Project Services (UNOPS). All rights reserved.
           </Text>
         </div>

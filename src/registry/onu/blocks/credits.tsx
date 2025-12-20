@@ -4,10 +4,11 @@
 
 import React from 'react';
 import { z } from 'zod';
-import { Section } from '@/ui/section';
-import { Heading } from '@/ui/heading';
-import { Text } from '@/registry/onu/ui/text';
-import { Card } from '@/ui/card';
+import { Section } from '@/components/ui/section';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
+import { Card } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 const TeamMemberSchema = z.object({
   name: z.string(),
@@ -39,26 +40,32 @@ export const CreditsBlock: React.FC<CreditsBlockProps> = ({
   className,
 }) => {
   return (
-    <Section spacing="lg" className={className}>
-      <div className="space-y-8">
-        <Heading level="h2" weight="bold">
+    <Section
+      spacing="lg"
+    >
+      {/* Decorative blobs */}
+      <div className="pointer-events-none absolute -top-40 -right-40 h-80 w-80 rounded-full bg-purple-300 opacity-10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-pink-300 opacity-10 blur-3xl" />
+
+      <div className="relative z-10 space-y-8">
+        <Heading level="h2" weight="bold" className="text-3xl text-slate-900">
           {title}
         </Heading>
 
         <div className="grid gap-6 md:grid-cols-2">
           {team && team.length > 0 && (
-            <Card >
-              <div className="space-y-4">
-                <Heading level="h3" weight="semibold">
+            <Card className="rounded-xl border border-blue-100/60 bg-linear-to-br from-blue-50 to-cyan-50/40 shadow-md">
+              <div className="space-y-4 p-6">
+                <Heading level="h3" weight="semibold" className="flex items-center gap-2 text-slate-900">
                   Project Team
                 </Heading>
                 <div className="space-y-3">
                   {team.map((member, index) => (
-                    <div key={index}>
-                      <Text weight="semibold">
+                    <div key={index} className="border-l-2 border-blue-200 pl-3">
+                      <Text weight="semibold" className="text-slate-900">
                         {member.name}
                       </Text>
-                      <Text className="text-muted-foreground">
+                      <Text className="text-slate-600">
                         {member.role}
                       </Text>
                     </div>
@@ -69,19 +76,19 @@ export const CreditsBlock: React.FC<CreditsBlockProps> = ({
           )}
 
           {partners && partners.length > 0 && (
-            <Card >
-              <div className="space-y-4">
-                <Heading level="h3" weight="semibold">
+            <Card className="rounded-xl border border-emerald-100/60 bg-linear-to-br from-emerald-50 to-green-50/40 shadow-md">
+              <div className="space-y-4 p-6">
+                <Heading level="h3" weight="semibold" className="flex items-center gap-2 text-slate-900">
                   Partners
                 </Heading>
                 <div className="space-y-3">
                   {partners.map((partner, index) => (
-                    <div key={index}>
-                      <Text weight="semibold">
+                    <div key={index} className="border-l-2 border-emerald-200 pl-3">
+                      <Text weight="semibold" className="text-slate-900">
                         {partner.name}
                       </Text>
                       {partner.contribution && (
-                        <Text className="text-muted-foreground">
+                        <Text className="text-slate-600">
                           {partner.contribution}
                         </Text>
                       )}
@@ -94,23 +101,23 @@ export const CreditsBlock: React.FC<CreditsBlockProps> = ({
         </div>
 
         {acknowledgements && (
-          <Card >
-            <div className="space-y-3">
-              <Heading level="h3" weight="semibold">
+          <Card className="rounded-xl border border-slate-200/60 bg-white shadow-md">
+            <div className="space-y-3 p-6">
+              <Heading level="h3" weight="semibold" className="text-slate-900">
                 Acknowledgements
               </Heading>
-              <Text >{acknowledgements}</Text>
+              <Text className="text-slate-700 leading-relaxed">{acknowledgements}</Text>
             </div>
           </Card>
         )}
 
         {funding && (
-          <Card >
-            <div className="space-y-3">
-              <Heading level="h3" weight="semibold">
+          <Card className="rounded-xl border border-amber-200/60 bg-linear-to-br from-amber-50 to-yellow-50/40 shadow-md">
+            <div className="space-y-3 p-6">
+              <Heading level="h3" weight="semibold" className="text-slate-900">
                 Funding
               </Heading>
-              <Text >{funding}</Text>
+              <Text className="text-slate-700 leading-relaxed">{funding}</Text>
             </div>
           </Card>
         )}

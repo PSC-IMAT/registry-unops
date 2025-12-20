@@ -2,14 +2,14 @@
 
 import React from "react";
 import { z } from "zod";
-import { Section } from "@/ui/section";
-import { SectionHeader } from "@/registry/onu/components/content/SectionHeader";
-import { Card } from "@/ui/card";
-import { Text } from "@/registry/onu/ui/text";
-import { ChartPlaceholder } from "@/registry/onu/components/story/ChartPlaceholder";
-import { ScrollStory } from "@/registry/onu/components/story/ScrollStory";
-import { PartnerGrid } from "@/registry/onu/components/story/PartnerGrid";
-import { Video } from "@/ui/video";
+import { Section } from "@/components/ui/section";
+import { SectionHeader } from "@/components/content/SectionHeader";
+import { Card } from "@/components/ui/card";
+import { Text } from "@/components/ui/text";
+import { ChartPlaceholder } from "@/components/story/ChartPlaceholder";
+import { ScrollStory } from "@/components/story/ScrollStory";
+import { PartnerGrid } from "@/components/story/PartnerGrid";
+import { Video } from "@/components/ui/video";
 
 const CategorySchema = z.object({ label: z.string() });
 
@@ -26,44 +26,53 @@ export type BaselineBlockProps = z.infer<typeof BaselineBlockSchema>;
 export const BaselineBlock: React.FC<BaselineBlockProps> = ({ header, videoSrc, categories, storySteps, partners }) => {
   return (
     <Section spacing="lg">
-      <div className="space-y-6">
+      <div className="space-y-8">
         <SectionHeader {...header} />
 
-        {/* Video / Categories */}
+        {/* Video / Categories Section */}
         <div className="grid gap-6 lg:grid-cols-2">
-          <div>
+          <div className="group">
             {videoSrc ? (
-              <Video src={videoSrc} className="w-full rounded" />
+              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200">
+                <Video src={videoSrc} className="w-full" />
+              </div>
             ) : (
-              <Card>
-                <div className="p-4">
-                  <Text className="text-muted-foreground">Video placeholder</Text>
+              <Card className="rounded-xl border-2 border-dashed border-slate-300 bg-linear-to-br from-slate-50 to-blue-50 hover:border-slate-400 transition-colors duration-300">
+                <div className="p-8 text-center">
+                  <div className="text-4xl mb-3">🎬</div>
+                  <Text className="text-muted-foreground font-medium">Video placeholder</Text>
                 </div>
               </Card>
             )}
           </div>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-4">
             {(categories ?? []).map((c, i) => (
-              <Card key={i}>
-                <div className="p-3">
-                  <Text>{c.label}</Text>
+              <Card 
+                key={i}
+                className="rounded-lg shadow-md hover:shadow-lg transition-all duration-300 bg-linear-to-br from-white to-slate-50 border border-slate-200/50 hover:border-blue-300 cursor-pointer hover:scale-105 transform"
+              >
+                <div className="p-5 text-center">
+                  <div className="text-lg font-semibold text-slate-900">{c.label}</div>
                 </div>
               </Card>
             ))}
           </div>
         </div>
 
-        {/* ScrollStory */}
-        <div className="space-y-4">
+        {/* ScrollStory Section */}
+        <div className="py-8 border-t border-b border-slate-200 bg-linear-to-r from-blue-50/50 to-cyan-50/50 rounded-xl p-8">
           <ScrollStory
             steps={storySteps.map((s, idx) => ({ title: s.title, text: s.text, rightMedia: <ChartPlaceholder label={`Step ${idx + 1} Chart`} /> }))}
           />
         </div>
 
-        {/* Partners */}
+        {/* Partners Section */}
         {partners && partners.length > 0 && (
-          <div className="space-y-2">
-            <Text className="text-muted-foreground">Partners</Text>
+          <div className="space-y-4 bg-linear-to-br from-slate-50 to-blue-50 rounded-xl p-8 border border-slate-200/50">
+            <div className="flex items-center gap-2">
+              <div className="text-2xl">🤝</div>
+              <Text className="text-slate-700 font-semibold text-lg">Our Partners</Text>
+            </div>
             <PartnerGrid partners={partners} />
           </div>
         )}
@@ -72,20 +81,3 @@ export const BaselineBlock: React.FC<BaselineBlockProps> = ({ header, videoSrc, 
   );
 };
 
-export const baselineExamples: BaselineBlockProps[] = [
-  {
-    header: {
-      title: "Establishing the baseline",
-      subtitle: "Pre-conflict infrastructure and services",
-      lead: "We document the status quo to inform subsequent monitoring and assessment phases.",
-    },
-    videoSrc: "/videos/baseline.mp4",
-    categories: [{ label: "Hospitals" }, { label: "Schools" }, { label: "Water" }, { label: "Power" }],
-    storySteps: [
-      { title: "Data collection", text: "Gather satellite imagery, official datasets, and field reports." },
-      { title: "Normalization", text: "Standardize formats and align spatial references." },
-      { title: "Baseline synthesis", text: "Create baseline layers for key assets and services." },
-    ],
-    partners: [{ name: "WHO" }, { name: "UNICEF" }, { name: "Local NGO" }],
-  },
-];
